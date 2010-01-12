@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh  $@
+
+override_dh_auto_install:
+	# Install the commands
+	install -d debian/usb-modeswitch-data/etc/usb_modeswitch.d
+	install --mode=644 -t debian/usb-modeswitch-data/etc/usb_modeswitch.d etc/usb_modeswitch.d/*
+	# Install the udev rule
+	install -d debian/usb-modeswitch-data/lib/udev/rules.d
+	install --mode=644 -t debian/usb-modeswitch-data/lib/udev/rules.d etc/udev/rules.d/80-usb_modeswitch.rules

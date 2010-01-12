@@ -1,0 +1,15 @@
+usb-modeswitch-data (20100110-1) unstable; urgency=low
+
+  * Initial release: source split from usb-modeswitch-data.
+    (Closes: #564924)
+  * Remove the "opt-in" patch to get the rules included again.
+    - See http://bugs.debian.org/557610#19
+    - Add a note about it in NEWS.Debian
+  * Patches:
+    + 05_move_wrappers_to_usr.patch 
+       Add. Moves wrappers to specific /usr/share/usb_modeswitch
+    + 07_SYSFS_to_ATTRS.patch
+        Add to fix "later udev versions output loads of syslog warnings"
+        (Closes: #560250)
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 12 Jan 2010 16:00:20 +0100

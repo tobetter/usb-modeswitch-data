@@ -1,0 +1,10 @@
+usb-modeswitch-data (20100110-1) unstable; urgency=low
+
+   usb-modeswitch-data 20100110-1, which includes the data for usb-modeswitch
+   >= 1.0.7-1 now again makes the rules "opt-out".
+
+  * It seems that the modem-modeswitch was somehow a kernel experiment and
+    that usb-modeswitch which was originally aimed to death gained a new life.
+    See http://bugs.debian.org/557610#19. Sorry for the ping-pong.
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 12 Jan 2010 14:03:55 +0100
