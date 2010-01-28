@@ -1,3 +1,27 @@
+usb-modeswitch-data (20100127-1) unstable; urgency=low
+
+  * New upstream release.
+    + New devices
+      [072f:200d] InfoCert Business Key (SmartCard/Reader emulation)
+      [106c:3b06] UTStarcom UM185E (distributor "Alltel")
+    - Devices removal
+      [057c:84ff] AVM Fritz!Wlan USB Stick N
+  * Add a debian/watch.
+  * Add a preinst to correctly delete the removed devices.
+  * Use upstream's Makefile
+  * Bump requirements.
+  * Add a bug-presubj to tell people about the new rules politics
+  * Add a dependency on udev (>= 0.140-1) (Closes: #567327)
+  * Patches:
+    + 01_no_udev_reload.patch
+       Add to avoid the useless udev rules reload.
+    - 05_move_wrappers_to_usr.patch
+       Remove. Now works differently.
+    - 07_SYSFS_to_ATTRS.patch
+       Remove. Merged upstream
+
+ -- Didier Raboud <didier@raboud.com>  Thu, 28 Jan 2010 15:19:58 +0100
+
 usb-modeswitch-data (20100110-1) unstable; urgency=low
 
   * Initial release: source split from usb-modeswitch-data.
