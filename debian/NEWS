@@ -8,3 +8,4 @@ usb-modeswitch-data (20100110-1) unstable; urgency=low
     See http://bugs.debian.org/557610#19. Sorry for the ping-pong.
 
  -- Didier Raboud <didier@raboud.com>  Tue, 12 Jan 2010 14:03:55 +0100
+

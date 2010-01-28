@@ -1,2 +1,1 @@
-05_move_wrappers_to_usr.patch
-07_SYSFS_to_ATTRS.patch
+01_no_udev_reload.patch
