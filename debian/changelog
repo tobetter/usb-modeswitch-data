@@ -1,3 +1,17 @@
+usb-modeswitch-data (20100203-1) unstable; urgency=low
+
+  * New upstream release.
+    + New devices
+      [057c:84ff] AVM Fritz!Wlan USB Stick N
+      [19d2:0026] ZTE AC581
+    × Devices updates
+      [19d2:2000] Re-arrange target product lists
+  * As 057c:84ff re-appeared, drop the preinst.
+  * debian/control : Makes the udev dependency | not+linux-gnu.
+  * debian/usb-modeswitch-data.docs : Include the upstream README.
+
+ -- Didier Raboud <didier@raboud.com>  Mon, 08 Feb 2010 23:30:54 +0100
+
 usb-modeswitch-data (20100127-1) unstable; urgency=low
 
   * New upstream release.

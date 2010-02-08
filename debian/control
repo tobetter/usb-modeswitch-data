@@ -10,7 +10,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/usb-modeswitch-data.git
 
 Package: usb-modeswitch-data
 Architecture: all
-Depends: ${misc:Depends}, udev (>= 0.140-1)
+Depends: ${misc:Depends}, udev (>= 0.140-1) | not+linux-gnu
 Recommends: usb-modeswitch (>= 1.1.0-1)
 Conflicts: usb-modeswitch (<< 1.0.7-1)
 Replaces: usb-modeswitch (<< 1.0.7-1)
