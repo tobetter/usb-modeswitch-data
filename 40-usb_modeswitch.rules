@@ -201,6 +201,9 @@ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1001", RUN+="usb_modeswitch '%b/%k'"
 # Huawei E220, E230, E270, E870
 ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1003", RUN+="usb_modeswitch '%b/%k'"
 
+# Huawei U7510 / U7517
+ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="101e", RUN+="usb_modeswitch '%b/%k'"
+
 # Huawei E180
 ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1414", RUN+="usb_modeswitch '%b/%k'"
 
@@ -237,13 +240,16 @@ ATTRS{idVendor}=="16d8", ATTRS{idProduct}=="700a", RUN+="usb_modeswitch '%b/%k'"
 # C-motech CGU-628 (aka "Franklin Wireless CGU-628A" aka "4G Systems XS Stick W12")
 ATTRS{idVendor}=="16d8", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
 
+# Beceem BCSM250
+ATTRS{idVendor}=="198f", ATTRS{idProduct}=="bccd", RUN+="usb_modeswitch '%b/%k'"
+
 # ZTE AC581
 ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0026", RUN+="usb_modeswitch '%b/%k'"
 
 # ZTE MF110
 ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0053", RUN+="usb_modeswitch '%b/%k'"
 
-# ZTE MF622 and probably others (WE NEED MORE ID INFO), ZTE MF626 and others (WE NEED MORE ID INFO!), ZTE Devices
+# ZTE MF622 and probably others (WE NEED MORE ID INFO), ZTE MF626 and others (WE NEED MORE ID INFO!), ZTE Devices, ZTE MF626 and others (WE NEED MORE ID INFO!)
 ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="2000", RUN+="usb_modeswitch '%b/%k'"
 
 # ZTE "fff" devices 1
@@ -283,3 +289,4 @@ ATTRS{idVendor}=="1e0e", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
 ATTRS{idVendor}=="1f28", ATTRS{idProduct}=="0021", RUN+="usb_modeswitch '%b/%k'"
 
 LABEL="modeswitch_rules_end"
+

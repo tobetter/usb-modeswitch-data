@@ -1,3 +1,13 @@
+usb-modeswitch-data (20100221-1) unstable; urgency=low
+
+  * New upstream release.
+    + New devices
+      [12d1:101e] Huawei U7510 / U7517
+      [198f:bccd] Beceem BCSM250
+      [19d2:2000] ZTE MF626 and others
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 23 Feb 2010 23:56:27 +0100
+
 usb-modeswitch-data (20100203-1) unstable; urgency=low
 
   * New upstream release.
