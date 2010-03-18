@@ -1,3 +1,16 @@
+usb-modeswitch-data (20100317-1) unstable; urgency=low
+
+  * New upstream release.
+    + New devices
+      [0482:024d] Kyocera W06K CDMA modem
+      [1004:607f] LG HDM-2100 (EVDO Rev.A USB modem)
+    × Uses NoDriverLoading, thus recommending usb-modeswitch (>= 1.1.1)
+
+  * Now that I am a DM, add DMUA field to debian/control.
+    Thanks go to Patrick Matthäi for the sponsoring!
+
+ -- Didier Raboud <didier@raboud.com>  Thu, 18 Mar 2010 11:08:46 +0100
+
 usb-modeswitch-data (20100221-1) unstable; urgency=low
 
   * New upstream release.

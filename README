@@ -6,7 +6,7 @@ http://www.draisberghof.de/usb_modeswitch
 This is a data package to complement the full release package of
 USB_ModeSwitch, a tool to switch multi-mode (or composite) USB devices.
 
-Required version of usb-modeswitch package is 1.1.0 and above.
+Required version of usb-modeswitch package is 1.1.1 and above.
 
 
 
@@ -29,4 +29,4 @@ Or find it as the file COPYING in this folder.
 
 
 
-Last revised: 2010-02-21, Josua Dietze
+Last revised: 2010-03-17, Josua Dietze
