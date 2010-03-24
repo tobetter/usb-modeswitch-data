@@ -1,3 +1,15 @@
+usb-modeswitch-data (20100322-1) unstable; urgency=low
+
+  * New upstream release
+    × Devices updates (see README for more details)
+      [16d8:6803] There are now two different versions
+      [19d2:2000] No more "eject" command (Closes: #574270)
+
+  * Correct dependencies to be on upstream releases and not on debian revisions.
+    Thanks Patrick Matthaï for the hint.
+
+ -- Didier Raboud <didier@raboud.com>  Wed, 24 Mar 2010 16:19:58 +0100
+
 usb-modeswitch-data (20100317-1) unstable; urgency=low
 
   * New upstream release.
