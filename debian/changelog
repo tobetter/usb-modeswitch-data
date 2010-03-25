@@ -1,3 +1,9 @@
+usb-modeswitch-data (20100322-2) unstable; urgency=low
+
+  * Remove the upstream-deleted files with conffile removal in preinst.
+
+ -- Didier Raboud <didier@raboud.com>  Thu, 25 Mar 2010 13:41:57 +0100
+
 usb-modeswitch-data (20100322-1) unstable; urgency=low
 
   * New upstream release
