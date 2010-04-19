@@ -4,11 +4,17 @@ README for USB_ModeSwitch Data
 For up-to-date and detailed information (plus a friendly forum) visit
 http://www.draisberghof.de/usb_modeswitch
 
+PLEASE REPORT NEW DEVICES
+
+
 
 This is a data package to complement the full release package of
 USB_ModeSwitch, a tool to switch multi-mode (or composite) USB devices.
+It is used since usb-modeswitch version 1.0.3.
 
-Required version of usb-modeswitch package is 1.1.1 and above.
+Recommended version of usb-modeswitch package is 1.1.2 and above. Some
+devices contained here may not be switched with older versions, even if
+they will not cause any error.
 
 
 Explanation about config file names:
@@ -21,7 +27,7 @@ to test can be attached after further colons:
 <VendorID>:<ProductID>:<Attribute>=<String>[:<Attribute>=<String> ...]
 
 The strings match if they are part of the attribute content. Use "_"
-to match spaces.
+to match spaces (it will match "_" too!).
 
 Currently recognized attibutes are:
 
@@ -33,6 +39,10 @@ sMo = SCSI, Model
 sRe = SCSI, Revision
 
 This list is easily extendable if necessary.
+
+Example:
+<vid>:<pid>:uPr=CDMA_Mo will match iProduct "CDMA Modem" or "MyCDMA_Mordor"
+
 
 If information is missing about ambiguous devices, a ":?" is attached
 to the file/ID in question. Please contact the forum if you need help
@@ -47,9 +57,6 @@ Notes about specific devices:
   and one with target product 0x680a, providing an ACM port. There is
   not enough information how to tell them apart; if you have the second
   one, we badly need information (usb_modeswitch output with SCSI inquiry)
-
-- 19d2:2000 (ZTE): finally dumped "eject" command completely; the other
-  command seems to work well with the older models
 
 
 Legal
@@ -71,5 +78,5 @@ Or find it as the file COPYING in this folder.
 
 
 
-Last revised: 2010-03-22, Josua Dietze
+Last revised: 2010-04-18, Josua Dietze
 
