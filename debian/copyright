@@ -1,6 +1,6 @@
 This work was packaged for Debian by:
 
-    Didier Raboud <Didier Raboud <didier@raboud.com>> on Tue, 12 Jan 2010 12:06:44 +0100
+    Didier Raboud <didier@raboud.com> on Tue, 12 Jan 2010 12:06:44 +0100
 
 It was downloaded from:
 
@@ -33,6 +33,6 @@ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
 The Debian packaging is:
 
-    Copyright (C) 2009, Didier Raboud <didier@raboud.com>
+    Copyright (C) 2009,2010, Didier Raboud <didier@raboud.com>
 
-and is licensed under the GPLv2+, as usb-modeswitch itself, see above.
+and is licensed under the GPLv2+, as usb-modeswitch-data itself, see above.

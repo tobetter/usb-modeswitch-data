@@ -1,3 +1,27 @@
+usb-modeswitch-data (20100418-1) unstable; urgency=low
+
+  * New upstream release
+     - First version with proper ChangeLog
+     - New rule to add a symlink to interrupt ports, thus bump
+       recommends on usb-modeswitch to 1.1.2
+     + New devices
+      [0fce:d0cf] Sony Ericsson MD300
+      [1266:1000] Digicom 8E4455 (and all Pirelli devices)
+      [1410:5041] Novatel Generic MiFi 2352 / Vodafone MiFi 2352
+      [19d2:0040] Vodafone (ZTE) K2525
+      [19d2:0101] Vodafone (ZTE) K4505-Z
+      [19d2:0115] ZTE MF651
+      [19d2:1001] Vodafone (ZTE) K3805-Z
+      [19d2:1007] Vodafone (ZTE) K3570-Z
+      [19d2:1009] Vodafone (ZTE) K3571-Z
+      [1fac:0130] Franklin Wireless U210
+     × Devices updates (see ChangeLog for details)
+      [056c:2001] D-Link DWM-162-U5, Micromax MMX 300c
+      [12d1:1446] Huawei, newer modems
+  * Correct typos and dates in debian/copyright.
+
+ -- Didier Raboud <didier@raboud.com>  Mon, 19 Apr 2010 13:59:43 +0200
+
 usb-modeswitch-data (20100322-2) unstable; urgency=low
 
   * Remove the upstream-deleted files with conffile removal in preinst.
