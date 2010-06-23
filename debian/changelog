@@ -1,3 +1,31 @@
+usb-modeswitch-data (20100621-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0af0:****] Option HSO devices
+     [0b3c:c700] Olivetti Olicard 100 and others
+     [0fce:d103] Rogers Rocket Stick (a Sony Ericsson device)
+     [1004:613a] LG L-05A
+     [1004:613f] LG LUU-2100TI (aka AT&T USBConnect Turbo)
+     [19d2:0003] ZTE MU351
+     [19d2:0083] ZTE MF110 (Variant)
+     [19d2:0103] ZTE MF112
+     [1a8d:1000] BandRich BandLuxe C170, BandLuxe C270
+    × Devices updates (see ChangeLog for details)
+     [1199:0fff] Sierra devices (specific driver)
+     [19d2:0026] ZTE AC581
+     [19d2:0053] ZTE MF110 (Variant)
+     [19d2:0101] Vodafone (ZTE) K4505-Z
+     [19d2:0115] ZTE MF651
+     [19d2:1001] Vodafone (ZTE) K3805-Z
+     [19d2:1007] Vodafone (ZTE) K3570-Z
+     [19d2:1009] Vodafone (ZTE) K3571-Z
+     [19d2:2000] ZTE devices (Closes: #585021)
+     [19d2:fff5] ZTE "fff" devices 1
+     [19d2:fff6] ZTE "fff" devices 2
+
+ -- Didier Raboud <didier@raboud.com>  Wed, 23 Jun 2010 11:16:13 +0200
+
 usb-modeswitch-data (20100418-1) unstable; urgency=low
 
   * New upstream release
