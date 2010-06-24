@@ -1,3 +1,11 @@
+usb-modeswitch-data (20100623-1) unstable; urgency=low
+
+  * New upstream release
+    + New device
+     [12d1:1557] Huawei E173
+
+ -- Didier Raboud <didier@raboud.com>  Thu, 24 Jun 2010 10:50:36 +0200
+
 usb-modeswitch-data (20100621-1) unstable; urgency=low
 
   * New upstream release
