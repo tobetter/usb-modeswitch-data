@@ -12,7 +12,7 @@ all:
 
 clean:
 
-install: files-install rules-reload
+install: files-install
 
 files-install:
 	install -d $(ETCDIR)/usb_modeswitch.d
@@ -37,7 +37,7 @@ rules-reload:
 		fi \
 	fi
 
-uninstall: files-uninstall rules-reload
+uninstall: files-uninstall
 
 files-uninstall:
 	$(RM) $(RULESDIR)/40-usb_modeswitch.rules
