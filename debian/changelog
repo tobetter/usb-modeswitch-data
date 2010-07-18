@@ -1,3 +1,20 @@
+usb-modeswitch-data (20100707-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0421:060c] Nokia CS-10
+     [0cf3:20ff] Atheros Wireless / Netgear WNDA3200
+     [12d1:1031] Huawei U8110 (Android smartphone)
+     [12d1:14c1] Vodafone (Huawei) K4605
+     [12d1:1523] Huawei R201
+     [1ee8:0013] Onda MW833UP
+    × Devices updates (see ChangeLog for details)
+     [19d2:****] ZTE devices
+    - Update patches.
+  * Bump Standards to 3.9.0.0: change a Conflicts to Breaks.
+
+ -- Didier Raboud <didier@raboud.com>  Sun, 18 Jul 2010 22:55:03 +0200
+
 usb-modeswitch-data (20100623-1) unstable; urgency=low
 
   * New upstream release
