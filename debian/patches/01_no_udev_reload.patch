@@ -2,21 +2,24 @@ Description: Avoids the useless udev rules reload
 Author: Didier Raboud <didier@raboud.com>
 Origin: vendor
 Forwarded: yes (private mail)
-Last-Update: 2010-07-18
-Index: usb-modeswitch-data.git/Makefile
+Last-Update: 2010-08-18
+Index: usb-modeswitch-data/Makefile
 ===================================================================
---- usb-modeswitch-data.git.orig/Makefile	2010-07-18 20:00:44.000000000 +0200
-+++ usb-modeswitch-data.git/Makefile	2010-07-18 20:07:48.000000000 +0200
-@@ -12,7 +12,7 @@
+--- usb-modeswitch-data.orig/Makefile	2010-08-18 10:35:32.000000000 +0200
++++ usb-modeswitch-data/Makefile	2010-08-18 10:46:53.000000000 +0200
+@@ -12,9 +12,9 @@
  
  clean:
  
--install: files-install rules-reload
-+install: files-install
+-install: files-install db-install rules-reload
++install: files-install db-install
+ 
+-install-packed: files-install db-install-packed rules-reload
++install-packed: files-install db-install-packed
  
  files-install:
  	install -d $(ETCDIR)/usb_modeswitch.d
-@@ -37,7 +37,7 @@
+@@ -47,7 +47,7 @@
  		fi \
  	fi
  

@@ -1,3 +1,22 @@
+usb-modeswitch-data (20100817-1~exp0) experimental; urgency=low
+
+  * New upstream release
+    + New devices
+     [04e8:689a] Samsung GT-B3730
+     [12d1:14ad] Vodafone (Huawei) K3806
+     [19d2:1013] Vodafone (ZTE) K3806-Z
+     [1c9e:9e00] BSNL Capitel
+    × Devices updates (see ChangeLog for details)
+     [05c6:1000] AnyData devices
+     [19d2:2000] ZTE devices (Closes: #590902)
+     [1c9e:f000] MobiData MBD-200HU and others
+    - Update patches.
+  * Add 02_no_tclsh_overhead.patch to avoid hardcoding tclsh path.
+
+  * Bump usb-modeswitch recommend to 1.1.4.
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 24 Aug 2010 00:23:42 +0200
+
 usb-modeswitch-data (20100707-1) unstable; urgency=low
 
   * New upstream release
