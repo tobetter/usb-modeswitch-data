@@ -1,3 +1,16 @@
+usb-modeswitch-data (20100826-1) unstable; urgency=low
+
+  * New upstream release
+   + New devices
+    [0b3c:f000] Olivetti Olicard 145
+    [1ee8:0009] Onda MW833UP
+   × Devices updates
+    [05c6:1000] Quirky Option devices
+
+  * Releasing to unstable, thanks to Release Team approval.
+
+ -- Didier Raboud <didier@raboud.com>  Mon, 30 Aug 2010 16:28:04 +0200
+
 usb-modeswitch-data (20100817-1~exp0) experimental; urgency=low
 
   * New upstream release
