@@ -29,6 +29,10 @@ install|upgrade)
         rm_conffile usb-modeswitch-data "/etc/usb_modeswitch.d/19d2:2000:uPr=ZTE_CDMA"
         rm_conffile usb-modeswitch-data "/etc/usb_modeswitch.d/19d2:2000:uPr=ZTE_WCDMA"
     fi
+    
+    if dpkg --compare-versions "$3" le "20101128-1"; then
+        rm_conffile usb-modeswitch-data "/etc/usb_modeswitch.d/1a8d:1000:uPr=5G"
+    fi
 esac
 
 #DEBHELPER#
