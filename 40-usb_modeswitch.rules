@@ -7,7 +7,7 @@ ACTION!="add", GOTO="modeswitch_rules_end"
 
 # This adds a symlink "gsmmodem[n]" to ttyUSB ports with interrupt transfer;
 # will work only with wrapper from 1.1.4 and above (otherwise ignored)
-KERNEL=="ttyUSB*", DRIVERS=="option1|usbserial", PROGRAM="/usr/bin/tclsh /usr/sbin/usb_modeswitch_dispatcher --symlink-name '%p' '%s{idVendor}' '%s{idProduct}'", SYMLINK="%c"
+KERNEL=="ttyUSB*", DRIVERS=="option1|usbserial", PROGRAM="/usr/sbin/usb_modeswitch_dispatcher --symlink-name '%p' '%s{idVendor}' '%s{idProduct}'", SYMLINK="%c"
 
 
 SUBSYSTEM!="usb", GOTO="modeswitch_rules_end"
