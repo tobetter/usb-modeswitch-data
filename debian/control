@@ -12,8 +12,8 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/usb-modeswitch-data.git
 Package: usb-modeswitch-data
 Architecture: all
 Depends: ${misc:Depends}, udev (>= 0.140) | not+linux-gnu
-Recommends: usb-modeswitch (>= 1.1.4)
-Breaks: usb-modeswitch (<< 1.0.7-1)
+Recommends: usb-modeswitch (>= 1.1.5)
+Breaks: usb-modeswitch (<< 1.1.5)
 Replaces: usb-modeswitch (<< 1.0.7-1)
 Description: mode switching data for usb-modeswitch
  Several new USB devices have their proprietary Windows drivers onboard,

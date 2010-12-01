@@ -1,3 +1,29 @@
+usb-modeswitch-data (20101128-1) experimental; urgency=low
+
+  * New upstream release
+    + New devices
+     [0421:0622] Nokia CS-17
+     [0421:0627] Nokia CS-18
+     [05c7:1000] Qtronix EVDO 3G Modem (for TianYi)
+     [0d46:45a1] Kobil mIdentity 3G (1)
+     [0d46:45a5] Kobil mIdentity 3G (2)
+     [0fd1:1000] GW D301 (Advinne AMC)
+     [1004:6190] LG AD600
+     [106c:3b05] Pantech / UTStarcom UMW190 (Verizon) (LP: #657129)
+     [1edf:6003] AirPlus MCD-800
+    × Devices updates (see ChangeLog for details)
+     [0482:024d] Kyocera W06K CDMA modem
+     [12d1:****] Huawei devices
+     [1410:5010] Novatel Wireless devices
+     [19d2:****] ZTE devices
+     [1a8d:1000] BandRich BandLuxe C100, C120, C170, C270 (merge)
+     [1bbb:f000] Alcatel X200/X200L/X060S
+    - Refresh patches.
+
+  * Bump usb-modeswitch Recommends and Breaks against to 1.1.5
+
+ -- Didier Raboud <didier@raboud.com>  Wed, 01 Dec 2010 16:02:54 +0100
+
 usb-modeswitch-data (20100826-1) unstable; urgency=low
 
   * New upstream release
