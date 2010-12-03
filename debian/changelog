@@ -1,3 +1,21 @@
+usb-modeswitch-data (20101202-1) experimental; urgency=low
+
+  * New upstream release 
+    + New devices
+     [12d1:1553] Huawei E1553
+     [12d1:1c0b] Huawei E173s
+     [230d:0001] Linktop LW272/LW273 (BSNL Teracom)
+    × Devices updates (see ChangeLog for details)
+     [0471:1210] Vodafone MD950 (Wisue Technology)
+     [0471:1237] Philips TalkTalk (NXP Semiconductors "Dragonfly")
+     [05c6:2001] D-Link DWM-162-U5, Micromax MMX 300c
+     [0930:0d46] Toshiba G450
+     [0fce:d103] Sony Ericsson MD400G
+     [1004:607f] LG HDM-2100 (EVDO Rev.A USB modem)
+    - Refresh patches.
+
+ -- Didier Raboud <didier@raboud.com>  Fri, 03 Dec 2010 10:09:36 +0100
+
 usb-modeswitch-data (20101128-1) experimental; urgency=low
 
   * New upstream release
