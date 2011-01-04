@@ -1,10 +1,23 @@
+usb-modeswitch-data (20101222-1) experimental; urgency=low
+
+  * New upstream release
+    + New devices
+     [0e8d:7109] MediaTek Wimax USB Card
+     [16d8:6281] C-motech CHU-628S
+    × Devices updates
+     [1a8d:1000] BandRich BandLuxe C100, C120, C170, C270
+  * Remove 02_no_tclsh_overhead patch; merged upstream.
+  * Bump Standards to 3.9.1 without changes needed.
+
+ -- Didier Raboud <didier@raboud.com>  Tue, 04 Jan 2011 17:13:04 +0100
+
 usb-modeswitch-data (20101202-1) experimental; urgency=low
 
   * New upstream release 
     + New devices
      [12d1:1553] Huawei E1553
      [12d1:1c0b] Huawei E173s
-     [230d:0001] Linktop LW272/LW273 (BSNL Teracom)
+     [230d:0001] Linktop LW272/LW273 (BSNL Teracom) (LP: #673459)
     × Devices updates (see ChangeLog for details)
      [0471:1210] Vodafone MD950 (Wisue Technology)
      [0471:1237] Philips TalkTalk (NXP Semiconductors "Dragonfly")
