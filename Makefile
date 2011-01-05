@@ -25,7 +25,8 @@ db-install:
 
 db-install-packed:
 	cd ./usb_modeswitch.d; tar -czf ../configPack.tar.gz *
-	install --mode=644 -t $(ETCDIR)/usb_modeswitch.d ./configPack.tar.gz
+	install -d $(PREFIX)/share/usb-modeswitch
+	install --mode=644 -t $(PREFIX)/share/usb-modeswitch/ ./configPack.tar.gz
 	rm -f ./configPack.tar.gz
 
 
