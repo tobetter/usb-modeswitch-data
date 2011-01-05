@@ -1,3 +1,7 @@
 #!/usr/bin/make -f
 %:
 	dh  $@
+
+# Pack the rules for usb-modeswitch-data-packed
+override_dh_auto_install:
+	dh_auto_install -- db-install-packed

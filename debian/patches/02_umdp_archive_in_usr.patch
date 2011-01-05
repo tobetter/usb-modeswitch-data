@@ -1,0 +1,17 @@
+Description: Install the configPack in /usr/share instead of /etc, as it's no
+ more a configuration file, but a system data file.
+Origin: vendor
+Author: Didier Raboud <odyx@debian.org>
+Last-Update: 2011-01-05
+--- a/Makefile
++++ b/Makefile
+@@ -25,7 +25,8 @@
+ 
+ db-install-packed:
+ 	cd ./usb_modeswitch.d; tar -czf ../configPack.tar.gz *
+-	install --mode=644 -t $(ETCDIR)/usb_modeswitch.d ./configPack.tar.gz
++	install -d $(PREFIX)/share/usb-modeswitch
++	install --mode=644 -t $(PREFIX)/share/usb-modeswitch/ ./configPack.tar.gz
+ 	rm -f ./configPack.tar.gz
+ 
+ 
