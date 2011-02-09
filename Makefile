@@ -12,9 +12,9 @@ all:
 
 clean:
 
-install: files-install db-install rules-reload
+install: files-install db-install
 
-install-packed: files-install db-install-packed rules-reload
+install-packed: files-install db-install-packed
 
 files-install:
 	install -d $(ETCDIR)/usb_modeswitch.d
@@ -47,7 +47,7 @@ rules-reload:
 		fi \
 	fi
 
-uninstall: files-uninstall rules-reload
+uninstall: files-uninstall
 
 files-uninstall:
 	$(RM) $(RULESDIR)/40-usb_modeswitch.rules
