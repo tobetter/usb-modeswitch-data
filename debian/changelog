@@ -1,3 +1,14 @@
+usb-modeswitch-data (20101222-3) unstable; urgency=low
+
+  * Upload to unstable
+  * Use new dh_installdeb maintscript possibility:
+    - Bump debhelper Build-Depends to 8.1.0
+    - Add Pre-Depends on ${misc:Pre-Depends} to usb-modeswitch-data
+    - Remove usb-modeswitch-data.preinst
+    - Add usb-modeswitch-data.maintscript
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 09 Feb 2011 14:35:48 +0100
+
 usb-modeswitch-data (20101222-2) experimental; urgency=low
 
   * Add a usb-modeswitch-data-packed package that ships the compressed
