@@ -1,3 +1,39 @@
+usb-modeswitch-data (20100826-1+squeeze0) stable; urgency=low
+
+  * From upstream release 20101222
+
+  * debian/patches/00_squeeze_new_devices.patch:
+    + Add new devices
+     [0421:0622] Nokia CS-17
+     [0421:0627] Nokia CS-18
+     [05c7:1000] Qtronix EVDO 3G Modem (for TianYi)
+     [0e8d:7109] MediaTek Wimax USB Card
+     [0fd1:1000] GW D301 (Advinne AMC)
+     [1004:6190] LG AD600
+     [106c:3b05] Pantech / UTStarcom UMW190 (Verizon)
+     [12d1:1553] Huawei E1553
+     [12d1:1c0b] Huawei E173s
+     [16d8:6281] C-motech CHU-628S
+     [1edf:6003] AirPlus MCD-800
+     [230d:0001] Linktop LW272/LW273 (BSNL Teracom)
+  * debian/patches/00_squeeze_enlarge_detection_base.patch:
+    × Enlarge devices detection base
+     [1410:5010] Novatel Wireless devices
+     [19d2:2000] ZTE devices
+     [1bbb:f000] Alcatel X200/X200L/X060S
+  * debian/patches/00_squeeze_huawei_updates.patch:
+    × Correct the modeswitching lines for Huawei devices
+     [12d1:101e] Huawei U7510 / U7517
+     [12d1:1446] Huawei, newer modems
+     [12d1:14ad] Vodafone (Huawei) K3806
+     [12d1:14c1] Vodafone (Huawei) K4605
+     [12d1:1520] Huawei K3765
+     [12d1:1521] Huawei K4505
+     [12d1:1523] Huawei R201
+     [12d1:1557] Huawei E173
+
+ -- Didier Raboud <didier@raboud.com>  Wed, 23 Feb 2011 18:18:52 +0100
+
 usb-modeswitch-data (20100826-1) unstable; urgency=low
 
   * New upstream release

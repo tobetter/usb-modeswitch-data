@@ -1,0 +1,42 @@
+Description: Enlarge the set of detected devices for selected identifiers
+Origin: upstream (release 20101228)
+Author: Didier Raboud <odyx@debian.org>
+Last-Update: 2011-02-23
+--- a/usb_modeswitch.d/1410:5010
++++ b/usb_modeswitch.d/1410:5010
+@@ -5,7 +5,7 @@
+ DefaultProduct=0x5010
+ 
+ TargetVendor=  0x1410
+-TargetProductList="4100,4400"
++TargetProductList="4100,4400,7030"
+ 
+ CheckSuccess=20
+ 
+--- a/usb_modeswitch.d/19d2:2000
++++ b/usb_modeswitch.d/19d2:2000
+@@ -5,7 +5,7 @@
+ DefaultProduct= 0x2000
+ 
+ TargetVendor=   0x19d2
+-TargetProductList="0001,0002,0015,0016,0017,0031,0037,0052,0055,0063,0064,0108,0128"
++TargetProductList="0001,0002,0015,0016,0017,0031,0037,0052,0055,0063,0064,0066,0091,0108,0117,0128"
+ 
+ MessageContent="5553424312345678000000000000061e000000000000000000000000000000"
+ MessageContent2="5553424312345679000000000000061b000000020000000000000000000000"
+--- a/usb_modeswitch.d/1bbb:f000
++++ b/usb_modeswitch.d/1bbb:f000
+@@ -1,11 +1,11 @@
+ ########################################################
+-# Alcatel X200/X060S
++# Alcatel X200/X200L/X060S
+ 
+ DefaultVendor= 0x1bbb
+ DefaultProduct=0xf000
+ 
+ TargetVendor=  0x1bbb
+-TargetProduct= 0x0000
++TargetProductList="0000,0017"
+ 
+ CheckSuccess=20
+ 
