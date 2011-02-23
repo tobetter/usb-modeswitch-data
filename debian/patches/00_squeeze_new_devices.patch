@@ -1,0 +1,302 @@
+Description: Import some new devices from new upstream releases.
+Author: Upstream, prepared by odyx@debian.org
+Last-Update: 2011-01-04
+
+--- a/40-usb_modeswitch.rules
++++ b/40-usb_modeswitch.rules
+@@ -35,6 +35,12 @@
+ # Nokia CS-15
+ ATTRS{idVendor}=="0421", ATTRS{idProduct}=="0610", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Nokia CS-17
++ATTRS{idVendor}=="0421", ATTRS{idProduct}=="0622", RUN+="usb_modeswitch '%b/%k'"
++
++# Nokia CS-18
++ATTRS{idVendor}=="0421", ATTRS{idProduct}=="0627", RUN+="usb_modeswitch '%b/%k'"
++
+ # Vodafone MD950 (Wisue Technology)
+ ATTRS{idVendor}=="0471", ATTRS{idProduct}=="1210", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -62,6 +68,9 @@
+ # Siptune LM-75 ("LinuxModem")
+ ATTRS{idVendor}=="05c6", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Qtronix EVDO 3G Modem (for TianYi)
++ATTRS{idVendor}=="05c7", ATTRS{idProduct}=="1000", RUN+="usb_modeswitch '%b/%k'"
++
+ # InfoCert Business Key (SmartCard/Reader emulation)
+ ATTRS{idVendor}=="072f", ATTRS{idProduct}=="100d", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -224,6 +233,9 @@
+ # Atheros Wireless / Netgear WNDA3200
+ ATTRS{idVendor}=="0cf3", ATTRS{idProduct}=="20ff", RUN+="usb_modeswitch '%b/%k'"
+ 
++# MediaTek Wimax USB Card
++ATTRS{idVendor}=="0e8d", ATTRS{idProduct}=="7109", RUN+="usb_modeswitch '%b/%k'"
++
+ # Sony Ericsson MD300
+ ATTRS{idVendor}=="0fce", ATTRS{idProduct}=="d0cf", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -233,6 +245,9 @@
+ # Rogers Rocket Stick (a Sony Ericsson device)
+ ATTRS{idVendor}=="0fce", ATTRS{idProduct}=="d103", RUN+="usb_modeswitch '%b/%k'"
+ 
++# GW D301 (Advinne AMC)
++ATTRS{idVendor}=="0fd1", ATTRS{idProduct}=="1000", RUN+="usb_modeswitch '%b/%k'"
++
+ # LG LDU-1900D EV-DO (Rev. A)
+ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="1000", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -245,12 +260,18 @@
+ # LG LUU-2100TI (aka AT&T USBConnect Turbo)
+ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="613f", RUN+="usb_modeswitch '%b/%k'"
+ 
++# LG AD600
++ATTRS{idVendor}=="1004", ATTRS{idProduct}=="6190", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei E630
+ ATTRS{idVendor}=="1033", ATTRS{idProduct}=="0035", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # UTStarcom UM175 (distributor "Alltel")
+ ATTRS{idVendor}=="106c", ATTRS{idProduct}=="3b03", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Pantech / UTStarcom UMW190 (Verizon)
++ATTRS{idVendor}=="106c", ATTRS{idProduct}=="3b05", RUN+="usb_modeswitch '%b/%k'"
++
+ # UTStarcom UM185E (distributor "Alltel")
+ ATTRS{idVendor}=="106c", ATTRS{idProduct}=="3b06", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -296,9 +317,15 @@
+ # Huawei R201
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1523", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Huawei E1553
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1553", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei E173
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1557", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Huawei E173s
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1c0b", RUN+="usb_modeswitch '%b/%k'"
++
+ # Novatel Wireless devices
+ ATTRS{idVendor}=="1410", ATTRS{idProduct}=="5010", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -317,6 +344,9 @@
+ # Motorola 802.11 bg WLAN (TER/GUSB3-E)
+ ATTRS{idVendor}=="148f", ATTRS{idProduct}=="2578", RUN+="usb_modeswitch '%b/%k'"
+ 
++# C-motech CHU-628S
++ATTRS{idVendor}=="16d8", ATTRS{idProduct}=="6281", RUN+="usb_modeswitch '%b/%k'"
++
+ # C-motech D-50 (aka "CDU-680"), C-motech D-50 (aka "CDU-680")
+ ATTRS{idVendor}=="16d8", ATTRS{idProduct}=="6803", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -404,6 +434,9 @@
+ # Option iCON 210, PROLiNK PHS100, Hyundai MB-810, A-Link 3GU
+ ATTRS{idVendor}=="1e0e", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
+ 
++# AirPlus MCD-800
++ATTRS{idVendor}=="1edf", ATTRS{idProduct}=="6003", RUN+="usb_modeswitch '%b/%k'"
++
+ # Onda MW833UP
+ ATTRS{idVendor}=="1ee8", ATTRS{idProduct}=="0009", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -416,4 +449,7 @@
+ # Franklin Wireless U210
+ ATTRS{idVendor}=="1fac", ATTRS{idProduct}=="0130", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Linktop LW272/LW273 (BSNL Teracom)
++ATTRS{idVendor}=="230d", ATTRS{idProduct}=="0001", RUN+="usb_modeswitch '%b/%k'"
++
+ LABEL="modeswitch_rules_end"
+--- /dev/null
++++ b/usb_modeswitch.d/0421:0622
+@@ -0,0 +1,13 @@
++#######################################################
++# Nokia CS-17
++
++DefaultVendor= 0x0421
++DefaultProduct=0x0622
++
++TargetVendor=  0x0421
++TargetProduct= 0x0623
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/0421:0627
+@@ -0,0 +1,13 @@
++#######################################################
++# Nokia CS-18
++
++DefaultVendor= 0x0421
++DefaultProduct=0x0627
++
++TargetVendor=  0x0421
++TargetProduct= 0x0612
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/05c7:1000
+@@ -0,0 +1,13 @@
++#######################################################
++# Qtronix EVDO 3G Modem (for TianYi)
++
++DefaultVendor= 0x05c7
++DefaultProduct=0x1000
++
++TargetVendor=  0x05c7
++TargetProduct= 0x6000
++
++MessageContent="5553424312345678c00000008000069f140000000000000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/0e8d:7109
+@@ -0,0 +1,15 @@
++########################################################
++# MediaTek Wimax USB Card
++
++DefaultVendor= 0x0e8d
++DefaultProduct=0x7109
++
++TargetVendor=  0x0e8d
++TargetProduct= 0x7118
++
++MessageContent="5553424312345678000000000000061e000000000000000000000000000000"
++MessageContent2="5553424312345679000000000000061b000000020000000000000000000000"
++NoDriverLoading=1
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/0fd1:1000
+@@ -0,0 +1,12 @@
++#######################################################
++# GW D301 (Advinne AMC)
++
++DefaultVendor= 0x0fd1
++DefaultProduct=0x1000
++
++TargetClass=0xff
++
++Configuration=3
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/1004:6190
+@@ -0,0 +1,13 @@
++#######################################################
++# LG AD600
++
++DefaultVendor= 0x1004
++DefaultProduct=0x6190
++
++TargetVendor=  0x1004
++TargetProduct= 0x61a7
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/106c:3b05
+@@ -0,0 +1,13 @@
++#######################################################
++# Pantech / UTStarcom UMW190 (Verizon)
++
++DefaultVendor= 0x106c
++DefaultProduct=0x3b05
++
++TargetVendor=  0x106c
++TargetProduct= 0x3716
++
++MessageContent="555342431234567824000000800008ff020000000000000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:1553
+@@ -0,0 +1,13 @@
++#######################################################
++# Huawei E1553
++
++DefaultVendor= 0x12d1
++DefaultProduct=0x1553
++
++TargetVendor=  0x12d1
++TargetProduct= 0x1001
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:1c0b
+@@ -0,0 +1,13 @@
++#######################################################
++# Huawei E173s
++
++DefaultVendor= 0x12d1
++DefaultProduct=0x1c0b
++
++TargetVendor=  0x12d1
++TargetProduct= 0x1c05
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/16d8:6281
+@@ -0,0 +1,12 @@
++########################################################
++# C-motech CHU-628S
++
++DefaultVendor= 0x16d8
++DefaultProduct=0x6281
++
++TargetClass=0xff
++
++MessageContent="555342431234567824000000800008ff524445564348470000000000000000"
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/1edf:6003
+@@ -0,0 +1,12 @@
++#######################################################
++# AirPlus MCD-800
++
++DefaultVendor= 0x1edf
++DefaultProduct=0x6003
++
++TargetClass=0xff
++
++Configuration=3
++
++CheckSuccess=20
++
+--- /dev/null
++++ b/usb_modeswitch.d/230d:0001
+@@ -0,0 +1,12 @@
++#######################################################
++# Linktop LW272/LW273 (BSNL Teracom)
++
++DefaultVendor= 0x230d
++DefaultProduct=0x0001
++
++TargetClass=0xff
++
++Configuration=3
++
++CheckSuccess=20
++

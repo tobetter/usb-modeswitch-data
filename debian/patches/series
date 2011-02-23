@@ -1,2 +1,5 @@
+00_squeeze_new_devices.patch
+00_squeeze_huawei_updates.patch
+00_squeeze_enlarge_detection_base.patch
 01_no_udev_reload.patch
 02_no_tclsh_overhead.patch
