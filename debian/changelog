@@ -1,3 +1,46 @@
+usb-modeswitch-data (20110227-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0421:060c] Nokia CS-10
+     [0cf3:20ff] Atheros Wireless / Netgear WNDA3200
+     [12d1:1031] Huawei U8110 / Joy, Vodafone 845 (Android smartphone)
+     [12d1:14c1] Vodafone (Huawei) K4605
+     [12d1:1523] Huawei R201
+     [19d2:0003] ZTE MU351
+     [19d2:0026] ZTE AC581
+     [1ee8:0013] Onda MW833UP
+    × Devices updates (see ChangeLog for details)
+     [19d2:0040] Vodafone (ZTE) K2525
+     [19d2:0053] ZTE MF110 (Variant)
+     [19d2:0103] ZTE MF112
+     [19d2:2000] ZTE devices
+
+  * Bump usb-modeswitch relationships to >= 1.1.7.
+  * Ship the packed rules under in the usb-modeswitch-data package, hence drop
+    usb-modeswitch-data-packed (Closes: #612690).
+    - Remove the -packed package.
+    - Update install files, no database entries outside of the tarball anymore
+      (Closes: #577853).
+    - Update building rules.
+    - Add Replaces/Conflicts/Provides on usb-modeswitch-data to -packed.
+    - Add all past configuration files to
+      debian/usb-modeswitch-data.maintscript.
+  * Patches:
+    × Refresh 01_no_udev_reload.patch.
+    - Remove 02_umdp_archive_in_usr.patch: Obsoleted by upstream changes.
+  * Name the maintscript debhelper file correctly (-data had been forgotten).
+  * Ship the /etc/usb_modeswitch.d directory, together with a lintian
+    override (it is meant to stay empty).
+  * Add a postinst snippet to keep the admin-modified database entries
+    in place.
+  * Add a README.Debian to explain the overriding mechanism.
+  * Add a NEWS entry to explain the raw database disappearing.
+  * Add debian/gen_dch.sh to generate the nice changelog entries.
+  * Also bump debhelper compat (was forgotten).
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 16 Mar 2011 14:09:43 +0100
+
 usb-modeswitch-data (20101222-3) unstable; urgency=low
 
   * Upload to unstable
