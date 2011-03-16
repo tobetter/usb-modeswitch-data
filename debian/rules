@@ -2,6 +2,7 @@
 %:
 	dh  $@
 
-# Pack the rules for usb-modeswitch-data-packed
+# Install in debian/tmp, to pick things with dh_install
+# Pack the rules for usb-modeswitch-data
 override_dh_auto_install:
-	dh_auto_install -- db-install-packed
+	dh_auto_install --destdir=debian/tmp/ -- db-install-packed
