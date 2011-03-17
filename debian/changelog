@@ -1,3 +1,12 @@
+usb-modeswitch-data (20110227-2) unstable; urgency=low
+
+  * Remove leftover 1a8d:1000:uPr=5G conffile (Closes: #618638).
+  * debian/*.postinst: In the handling of modified configuration files,
+    replace the 'rename' call (producing errors) by a 'find -exec rename'
+    (cleaner).
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 17 Mar 2011 09:40:36 +0100
+
 usb-modeswitch-data (20110227-1) unstable; urgency=low
 
   * New upstream release
