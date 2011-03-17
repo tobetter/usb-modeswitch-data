@@ -1,7 +1,7 @@
 rm_conffile "/etc/usb_modeswitch.d/19d2:2000:uPr=USB_ZTE" 20100322-2
 rm_conffile "/etc/usb_modeswitch.d/19d2:2000:uPr=ZTE_CDMA" 20100322-2
 rm_conffile "/etc/usb_modeswitch.d/19d2:2000:uPr=ZTE_WCDMA" 20100322-2
-rm_conffile "/etc/usb_modeswitch.d/1a8d:1000:uPr=5G" 20101128-1
+rm_conffile "/etc/usb_modeswitch.d/1a8d:1000:uPr=5G" 20110227-1
 # The Big Removal
 rm_conffile "/etc/usb_modeswitch.d/0421:060c" 20101222-3
 rm_conffile "/etc/usb_modeswitch.d/0421:0610" 20101222-3
