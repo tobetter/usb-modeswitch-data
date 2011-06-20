@@ -1,3 +1,37 @@
+usb-modeswitch-data (20110619-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [03f0:002a] HP LaserJet Professional P1102
+     [0471:1210] Vodafone MD950 (Wisue Technology)
+     [05c6:1000:sVe=GT] Option GlobeTrotter GX0201
+     [07d1:a804] D-Link DWM-156 HSUPA 3.75G USB Modem
+     [0df7:0800] Mobile Action ("Smart Cable", will vanish)
+     [12d1:1030] Huawei U8220, T-Mobile Pulse (Android smartphone)
+     [12d1:14b5] Huawei E173 (Viettel 3G)
+     [12d1:14fe] T-Mobile NL (Huawei E352)
+     [148e:a000] Sequans SQN1210/SQN1220 (generic chipsets)
+     [16d8:700b] C-motech CHU-629S (Variant)
+     [198a:0003] JOA Telecom LM-700r
+     [19d2:0013] Vodafone/ZTE K3806-Z
+     [19d2:0149] ZTE MF190 (Variant)
+     [19d2:1201] ZTE MF691 (T-Mobile Rocket 2.0)
+     [19d2:1216] ZTE MF192
+     [19d2:1224] ZTE MF190
+     [19d2:ffe6] ZTE "ffe" devices 1 (e.g. Cricket A605)
+     [230d:0007] Visiontek 82GH 3G
+    × Devices updates (see ChangeLog for details)
+     [072f:100d] InfoCert Business Key (SmartCard/Reader emulation)
+     [0b3c:f000] Olivetti Olicard 145, 155
+     [12d1:1446] Huawei, newer modems (LP: #776959)
+     [1c9e:f000] MobiData MBD-200HU and others
+
+  * Refresh patches.
+  * Bump usb-modeswitch relationships to >= 1.1.8.
+  * Bump Standards-Version to 3.9.2 without changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 20 Jun 2011 10:17:09 +0200
+
 usb-modeswitch-data (20110227-2) unstable; urgency=low
 
   * Remove leftover 1a8d:1000:uPr=5G conffile (Closes: #618638).
