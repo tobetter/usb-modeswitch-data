@@ -2,7 +2,7 @@ Description: Avoids the useless udev rules reload
 Author: Didier Raboud <didier@raboud.com>
 Origin: vendor
 Forwarded: yes (private mail)
-Last-Update: 2011-02-28
+Last-Update: 2011-06-20
 --- a/Makefile
 +++ b/Makefile
 @@ -12,9 +12,9 @@
@@ -17,7 +17,7 @@ Last-Update: 2011-02-28
  
  files-install:
  	install -d $(PREFIX)/share/usb_modeswitch
-@@ -47,7 +47,7 @@
+@@ -48,7 +48,7 @@
  		fi \
  	fi
  
