@@ -1,3 +1,20 @@
+usb-modeswitch-data (20110714-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0af0:7a05] Option iCon 461
+     [12d1:14c4] Vodafone/Huawei K3771
+     [12d1:14d1] Vodafone/Huawei K3770
+     [12d1:1505] Huawei EC156
+     [19d2:bccd] ZTE AX226 WiMax
+     [1c9e:9800] Longcheer SU9800
+     [2020:f00e] SpeedUp SU-8000U
+    × Devices updates (see ChangeLog for details)
+     [0df7:0800] Mobile Action ("Smart Cable")
+     [1a8d:1000] BandRich BandLuxe C100, C120, C170, C270, C3xx
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 15 Jul 2011 19:36:46 +0200
+
 usb-modeswitch-data (20110619-1) unstable; urgency=low
 
   * New upstream release
