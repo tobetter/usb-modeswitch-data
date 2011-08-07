@@ -1,3 +1,21 @@
+usb-modeswitch-data (20110805-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0af0:****] Option HSO devices
+     [12d1:14b7] Vodafone (Huawei) K4511
+     [12d1:14c5] Vodafone (Huawei) K4510
+     [1307:1169] Cisco AM10 "Valet Connector"
+     [19d2:1171] Vodafone (ZTE) K4510-Z
+     [19d2:1175] Vodafone (ZTE) K3770-Z
+     [19d2:1179] Vodafone (ZTE) K3772-Z
+    - Configuration cleaning
+     [0471:1210] Vodafone MD950 (Wisue Technology) (was superfluous).
+
+  * Bump usb-modeswitch relationships to >= 1.1.9.
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 07 Aug 2011 17:08:41 +0200
+
 usb-modeswitch-data (20110714-1) unstable; urgency=low
 
   * New upstream release
