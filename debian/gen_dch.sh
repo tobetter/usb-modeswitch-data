@@ -14,6 +14,8 @@ fn=usb_modeswitch.d/$id
 if test -e $fn; then
 	echo -n "[$id] "
 	head -n 2 $fn | tail -n 1 | sed -e 's/^# //g'
+else
+	echo "[$id] (Removed or renamed)"
 fi
 }
 
@@ -29,15 +31,7 @@ do
 		then
 			tag="+";
 		else
-			# Pure removals
-			echo $line | grep '-' | grep -v '+'  >/dev/null && true
-			if [ $? -eq 0 ]
-			then
-				echo "-$line";
-				tag="-";
-			else
-				tag="×";
-			fi
+			tag="×";
 		fi
 		id=`echo $line | sed -e 's,^usb_modeswitch.d/\(.*\) | .*$,\1,'`
 		echo -n "   $tag "
