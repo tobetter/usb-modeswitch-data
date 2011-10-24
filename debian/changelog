@@ -1,3 +1,29 @@
+usb-modeswitch-data (20111023-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0421:062c] Nokia CS-19
+     [04e8:f000:sMo=U209] Samsung U209, renamed from [04e8:f000].
+     [05c6:6503] AnyDATA APE-540H
+     [12d1:1d50] Huawei ET302
+     [1410:5059] Novatel Wireless MC545 HSPA
+     [16d8:6804] C-motech CDU-685a
+     [19d2:0166] ZTE MF820 4G LTE
+     [19d2:1517] ZTE MF192 (Variant)
+     [19d2:ffde] ZTE AC682 (a.k.a. SmartFren Connex)
+     [1bbb:f052] Alcatel OT X220L
+     [1da5:f000] Qisda H21 Flying Beetle
+     [1de1:1101] Philips PicoPix 1020 Projector
+     [1e89:f000] 3GO 3GO11 HSUPA
+    × Devices updates (see ChangeLog for details)
+     [12d1:14b5] Huawei E173 (Viettel 3G)
+     [19d2:2000] ZTE devices
+
+  * Fix the unpacking command in the overriding documentation.
+  * Bump usb-modeswitch relationships to >= 1.2.0.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 24 Oct 2011 09:45:44 +0200
+
 usb-modeswitch-data (20110805-1) unstable; urgency=low
 
   * New upstream release
