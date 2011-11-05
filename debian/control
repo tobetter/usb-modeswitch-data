@@ -1,7 +1,8 @@
 Source: usb-modeswitch-data
 Section: comm
 Priority: extra
-Maintainer: Didier Raboud <odyx@debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>= 8.1.0)
 Standards-Version: 3.9.2.0
 Homepage: http://www.draisberghof.de/usb_modeswitch/
@@ -12,8 +13,8 @@ Package: usb-modeswitch-data
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, udev (>= 0.140) | not+linux-gnu
-Recommends: usb-modeswitch (>= 1.2.0)
-Breaks: usb-modeswitch (<< 1.2.0)
+Recommends: usb-modeswitch (>= 1.1.9)
+Breaks: usb-modeswitch (<< 1.1.9)
 Replaces: usb-modeswitch (<< 1.0.7-1), usb-modeswitch-data-packed
 Conflicts: usb-modeswitch-data-packed
 Provides: usb-modeswitch-data-packed
