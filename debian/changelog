@@ -1,3 +1,12 @@
+usb-modeswitch-data (20111023-1ubuntu1) precise; urgency=low
+
+  * debian/control: Lower usb-modeswitch dependency back to >= 1.1.9, to
+    make packages and Precise daily ISO installable again. Nothing fundamental
+    changed in this version of -data, 1.2.0 is now just the recommended
+    version (1.0.3 is the minimum required one).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Sat, 05 Nov 2011 07:32:28 -0400
+
 usb-modeswitch-data (20111023-1) unstable; urgency=low
 
   * New upstream release
