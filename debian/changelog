@@ -1,3 +1,26 @@
+usb-modeswitch-data (20120120-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+    - reduced redundancies in parameters, resulting in smaller files
+    - Added devices:
+      + Air FlexiNet/StrongRising
+      + BandLuxe C339
+      + Celot CT-680
+      + C-motech CDU-685a
+      + Huawei E353
+      + Haier CE682
+      + LG L-02C LTE
+      + LG SD711
+      + LG L-08C
+      + LG L-07A
+      + I-O Data WMX2-U
+      + Option GI1515
+      + Qisda H21 "Flying Beetle"
+      + ZTE A371B
+      + ZTE MF652 (two Variants)
+
+ -- Mathieu Trudel-Lapierre <mathieu-tl@ubuntu.com>  Fri, 10 Feb 2012 11:36:41 -0500
+
 usb-modeswitch-data (20111023-1ubuntu1) precise; urgency=low
 
   * debian/control: Lower usb-modeswitch dependency back to >= 1.1.9, to
