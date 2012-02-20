@@ -1,3 +1,30 @@
+usb-modeswitch-data (20120120-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [04bb:bccd] I-O Data WMX2-U Wimax
+     [05c6:1000] Celot CT-680
+     [0af0:7706] Option HSO device
+     [0af0:d001] Option GlobeTrotter GI1515
+     [1004:614e] LG L-07A
+     [1004:61dd] LG L-02C LTE
+     [1004:61e7] LG SD711
+     [1004:61eb] LG L-08C (NTT docomo)
+     [12d1:1f01] Huawei E353 (3.se)
+     [19d2:0146] ZTE MF652 (Variant)
+     [19d2:0169] ZTE A371B
+     [19d2:1520] ZTE MF652
+     [1a8d:2000] BandRich BandLuxe C339
+     [201e:1023] Haier CE682 (EVDO)
+     [21f5:1000] StrongRising (China Telcom), Air FlexiNet
+    × Reduced redundancies in parameters, resulting in smaller files.
+    
+  * Demote udev Depends to Recommends without alternative.
+    (Closes: #649233)
+  * Bump relationships to usb-modeswitch to >= 1.2.1.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 20 Feb 2012 15:33:59 +0100
+
 usb-modeswitch-data (20111023-1) unstable; urgency=low
 
   * New upstream release
