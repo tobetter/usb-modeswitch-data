@@ -5,37 +5,26 @@ set -e
 # Commit identifiant
 cid=$1
 
-function get_desc
-{
-id=$1
+attrs_line=0
 
-fn=usb_modeswitch.d/$id
-
-if test -e $fn; then
-	echo -n "[$id] "
-	head -n 2 $fn | tail -n 1 | sed -e 's/^# //g'
-else
-	echo "[$id] (Removed or renamed)"
-fi
-}
-
-git show --stat $cid | while read line
+echo "    + New devices"
+git show $cid *-usb_modeswitch.rules | egrep -B1 -e '^\+ATTRS' | while read line
 do
-	echo $line | grep 'usb_modeswitch.d/' >/dev/null && true
-	# Are we handling a configuration file
-	if [ $? -eq 0 ] 
+	
+	if [ $attrs_line -eq 0 ]
 	then
-		# Pure additions
-		echo $line | grep '+' | grep -v '-'  >/dev/null && true
-		if [ $? -eq 0 ]
-		then
-			tag="+";
-		else
-			tag="×";
-		fi
-		id=`echo $line | sed -e 's,^usb_modeswitch.d/\(.*\) | .*$,\1,'`
-		echo -n "   $tag "
-		get_desc $id;
+		attrs_line=1
+		# Line 0 is the Description
+		DESC=`echo $line | sed -e 's/^.*# \(.*\)$/\1/'`
+	elif [ $attrs_line -eq 1 ]
+	then
+		attrs_line=2
+		# Line 1 is the Attributes
+		ATTRS=`echo $line | sed -e 's/^.*ATTRS{idVendor}=="\(.*\)".*ATTRS{idProduct}=="\(.*\)",.*$/\[\1:\2\]/'`
+		echo "     $ATTRS $DESC"
+	else
+		attrs_line=0
+		# Line 2 is the context
 	fi
 done
 
