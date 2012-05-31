@@ -17,7 +17,7 @@ Last-Update: 2011-06-20
  
  files-install:
  	install -d $(PREFIX)/share/usb_modeswitch
-@@ -47,7 +47,7 @@
+@@ -50,7 +50,7 @@
  		fi \
  	fi
  

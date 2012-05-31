@@ -1,3 +1,32 @@
+usb-modeswitch-data (20120529-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0408:f000] Yota Router (Quanta 1QDLZZZ0ST2)
+     [0421:0637] Nokia CS-21M-02
+     [04e8:680c] Samsung GT-B1110
+     [0af0:4007] Option iCon 711
+     [0af0:8006] Option Globetrotter (Variant)
+     [0e8d:0002] MediaTek MT6276M
+     [109b:f009] Hisense E910 EVDO Phone
+     [12d1:14c3] K5005 Vodafone/Huawei
+     [12d1:1c24] Huawei E173 (Moviestar)
+     [19d2:0031] ZTE MF637
+     [19d2:1514] ZTE MF192 (yet annother variant)
+     [1c9e:98ff] Telewell TW-3G HSPA+
+     [1ee8:0060] Onda MSA 14.4 (TIM Brasil)
+     [2001:a80b] D-Link DWM-156 (Variant)
+     [2077:f000] Telenet 3G dongle (T&W WU160)
+     [22f4:0021] Tata Photon+
+    × Some target product ID additions.
+    × Skip driver loading for some devices now supported by dedicated
+      drivers.
+    × Minor fine tuning and corrections
+
+  * Bump Standards-Version to 3.9.3 without changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 31 May 2012 11:07:32 +0200
+
 usb-modeswitch-data (20120120-1) unstable; urgency=low
 
   * New upstream release
@@ -18,7 +47,7 @@ usb-modeswitch-data (20120120-1) unstable; urgency=low
      [201e:1023] Haier CE682 (EVDO)
      [21f5:1000] StrongRising (China Telcom), Air FlexiNet
     × Reduced redundancies in parameters, resulting in smaller files.
-    
+
   * Demote udev Depends to Recommends without alternative.
     (Closes: #649233)
   * Bump relationships to usb-modeswitch to >= 1.2.1.
