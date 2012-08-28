@@ -1,3 +1,33 @@
+usb-modeswitch-data (20120815-1) unstable; urgency=low
+
+  * New upstream release.
+    + New devices
+     [0421:061d] Nokia CS-11
+     [0922:1001] Dymo LabelManager
+     [0af0:8700] Option GI0643 (aka XYFI)
+     [15eb:7153] China TeleCom CBP7.0
+     [19d2:0154] ZTE MF190 (Variant)
+     [19d2:0325] ZTE MF821D
+     [19d2:1017] Vodafone K5006Z (MF821)
+     [1bbb:00ca] Alcatel OT-X080C
+     [1bbb:f017] Alcatel OT-X220D
+     [1ee8:004a] Onda MDC655
+     [22de:6803] WeTelecom WM-D300
+     [230d:0101] Linktop LW272/LW273
+     [2357:0200] TP-Link MA180
+    × Devices updates (see ChangeLog for details)
+     [12d1:14fe] Small target ID addition for Huawei E352
+     [1410:5059] Fix config for Novatel MC545
+     [16d8:6803] Updated config for C-motech D-50
+     [19d2:2000] Add one more TargetProduct
+    × Changes in "rules" file (interface number filters) to reflect
+      recent reports.
+
+  * Minor update to the gen_dch helper script to be stricter when
+    parsing git diff.
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 28 Aug 2012 11:21:02 +0200
+
 usb-modeswitch-data (20120531-1) unstable; urgency=low
 
   * New upstream release.
