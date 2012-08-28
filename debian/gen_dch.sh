@@ -8,7 +8,7 @@ cid=$1
 attrs_line=0
 
 echo "    + New devices"
-git show $cid *-usb_modeswitch.rules | egrep -B1 -e '^\+ATTRS' | while read line
+git show $cid *-usb_modeswitch.rules | egrep -B1 -e '^\+ATTRS{idVendor}' | while read line
 do
 	
 	if [ $attrs_line -eq 0 ]
