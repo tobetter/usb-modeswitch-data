@@ -1,3 +1,55 @@
+usb-modeswitch-data (20121109-1) experimental; urgency=low
+
+  * New upstream release.
+    - Preparation for future MBIM devices: new "NoMBIMCheck" config parameter
+    - Change in modem rules (match devices, not interfaces), best used
+      with usb_modeswitch 1.2.5 and up.
+    + New devices
+     [0421:0632] Nokia CS-7M-01
+     [05c6:1000:uMa=StrongRising] StrongRising device
+     [1004:6156] LG LUU-2110TI
+     [1004:61aa] LG VL600
+     [1004:6327] LG L-03D LTE/3G
+     [106c:3b14] Option Beemo / Pantech P4200 LTE
+     [12d1:14ba] Huawei E173u-2, E177
+     [12d1:151a] Huawei E392u-12
+     [12d1:1526] Vodafone / Huawei K3772
+     [12d1:155b] Huawei E171
+     [12d1:1f11] Vodafone / Huawei K3773
+     [1410:7001] Novatel Generic MiFi 2372 / Vodafone MiFi 2372
+     [19d2:0083] ZTE MF110 (Variant)
+     [19d2:1523] ZTE MF591 TMobile
+     [19d2:1542] ZTE MF190J
+     [1bbb:000f] ETCOM E300
+     [1ee8:0054] Onda MW875UP
+     [1fac:0150] Franklin Wireless U600
+     [1fac:0151] Franklin Wireless U600
+    × Device updates (see Changelog for details)
+     [0421:0627] Nokia CS-18
+     [0e8d:0002:uPr=MT] MediaTek MT6276M
+     [1199:0fff] Sierra devices (specific driver)
+     [12d1:1446] Huawei, newer modems
+     [12d1:14d1] Vodafone / Huawei K3770
+     [12d1:14fe] T-Mobile NL (Huawei E352)
+     [12d1:1505] Huawei EC156, Huawei E372u-8
+     [12d1:1c0b] Huawei E173s
+     [12d1:1da1] Huawei ET8282, Huawei ET127
+     [16d8:6803] C-motech D-50 (aka "CDU-680", "CNU-680")
+     [19d2:0154] ZTE MF190 (Variant) and others
+     [19d2:1175] Vodafone / ZTE K3770-Z
+     [19d2:1216] ZTE MF192+
+     [19d2:2000] ZTE devices
+     [1ab7:5700] Hummer DTM5731, Aircard 901
+     [1bbb:f000] Alcatel X200/X200L/X060S, Archos G9 3G Key
+     [1ee8:0013] Onda MW833UP
+     [1ee8:0040] Onda MW836UP-K
+     [21f5:1000] StrongRising (China Telcom), Air FlexiNet
+
+  * Bump Standards-Version to 3.9.4 and debhelper B-D to 9 without
+    changes needed.
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 20 Nov 2012 11:09:31 +0100
+
 usb-modeswitch-data (20120815-1) unstable; urgency=low
 
   * New upstream release.

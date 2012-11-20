@@ -2,8 +2,8 @@ Source: usb-modeswitch-data
 Section: comm
 Priority: extra
 Maintainer: Didier Raboud <odyx@debian.org>
-Build-Depends: debhelper (>= 8.1.0)
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
 Homepage: http://www.draisberghof.de/usb_modeswitch/
 Vcs-Git: git://git.debian.org/collab-maint/usb-modeswitch-data.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/usb-modeswitch-data.git
