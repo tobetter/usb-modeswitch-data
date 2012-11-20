@@ -1,0 +1,771 @@
+Description: Backport all device updates from upstream 20121109.
+
+diff --git a/40-usb_modeswitch.rules b/40-usb_modeswitch.rules
+index efc05b2..a38cdc8 100644
+--- a/40-usb_modeswitch.rules
++++ b/40-usb_modeswitch.rules
+@@ -54,6 +54,9 @@ ATTRS{idVendor}=="0421", ATTRS{idProduct}=="0627", RUN+="usb_modeswitch '%b/%k'"
+ # Nokia CS-19
+ ATTRS{idVendor}=="0421", ATTRS{idProduct}=="062c", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Nokia CS-7M-01
++ATTRS{idVendor}=="0421", ATTRS{idProduct}=="0632", RUN+="usb_modeswitch '%b/%k'"
++
+ # Nokia CS-21M-02
+ ATTRS{idVendor}=="0421", ATTRS{idProduct}=="0637", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -81,7 +84,7 @@ ATTRS{idVendor}=="04e8", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
+ # AVM Fritz!Wlan USB Stick N
+ ATTRS{idVendor}=="057c", ATTRS{idProduct}=="84ff", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Celot K-300, Quirky Option devices, Vertex Wireless 100 Series, Option GlobeTrotter GX0201, Older Option devices, Samsung SGH-Z810, Prolink P2000 CDMA, Celot CT-680, AnyDATA devices, Bless UC165
++# Prolink P2000 CDMA, Samsung SGH-Z810, Older Option devices, Vertex Wireless 100 Series, AnyDATA devices, Bless UC165, Option GlobeTrotter GX0201, Celot K-300, Celot CT-680
+ ATTRS{idVendor}=="05c6", ATTRS{idProduct}=="1000", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # HSDPA USB modem from dealextreme 
+@@ -345,9 +348,15 @@ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="613f", RUN+="usb_modeswitch '%b/%k'"
+ # LG L-07A
+ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="614e", RUN+="usb_modeswitch '%b/%k'"
+ 
++# LG LUU-2110TI
++ATTRS{idVendor}=="1004", ATTRS{idProduct}=="6156", RUN+="usb_modeswitch '%b/%k'"
++
+ # LG AD600
+ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="6190", RUN+="usb_modeswitch '%b/%k'"
+ 
++# LG VL600
++ATTRS{idVendor}=="1004", ATTRS{idProduct}=="61aa", RUN+="usb_modeswitch '%b/%k'"
++
+ # LG L-02C LTE
+ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="61dd", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -357,6 +366,9 @@ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="61e7", RUN+="usb_modeswitch '%b/%k'"
+ # LG L-08C (NTT docomo)
+ ATTRS{idVendor}=="1004", ATTRS{idProduct}=="61eb", RUN+="usb_modeswitch '%b/%k'"
+ 
++# LG L-03D LTE/3G
++ATTRS{idVendor}=="1004", ATTRS{idProduct}=="6327", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei E630
+ ATTRS{idVendor}=="1033", ATTRS{idProduct}=="0035", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -369,6 +381,9 @@ ATTRS{idVendor}=="106c", ATTRS{idProduct}=="3b05", RUN+="usb_modeswitch '%b/%k'"
+ # UTStarcom UM185E (distributor "Alltel")
+ ATTRS{idVendor}=="106c", ATTRS{idProduct}=="3b06", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Option Beemo / Pantech P4200 LTE
++ATTRS{idVendor}=="106c", ATTRS{idProduct}=="3b14", RUN+="usb_modeswitch '%b/%k'"
++
+ # Sagem F@ST 9520-35-GLR
+ ATTRS{idVendor}=="1076", ATTRS{idProduct}=="7f40", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -417,6 +432,9 @@ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14b5", RUN+="usb_modeswitch '%b/%k'"
+ # Vodafone (Huawei) K4511
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14b7", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Huawei E173u-2, E177
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14ba", RUN+="usb_modeswitch '%b/%k'"
++
+ # Vodafone (Huawei) K4605
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14c1", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -429,15 +447,18 @@ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14c4", RUN+="usb_modeswitch '%b/%k'"
+ # Vodafone (Huawei) K4510
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14c5", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Vodafone/Huawei K3770
++# Vodafone / Huawei K3770
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14d1", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # T-Mobile NL (Huawei E352)
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="14fe", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Huawei EC156
++# Huawei EC156, Huawei E372u-8
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1505", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Huawei E392u-12
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="151a", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei K3765
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1520", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -447,12 +468,18 @@ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1521", RUN+="usb_modeswitch '%b/%k'"
+ # Huawei R201
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1523", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Vodafone / Huawei K3772
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1526", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei E1553
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1553", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # Huawei E173
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1557", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Huawei E171
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="155b", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei E173s
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1c0b", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -462,12 +489,15 @@ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1c24", RUN+="usb_modeswitch '%b/%k'"
+ # Huawei ET302
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1d50", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Huawei ET8282 
++# Huawei ET8282, Huawei ET127
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1da1", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # Huawei E353 (3.se)
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1f01", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Vodafone / Huawei K3773
++ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1f11", RUN+="usb_modeswitch '%b/%k'"
++
+ # Huawei BM358 WiMAX
+ ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="380b", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -492,6 +522,9 @@ ATTRS{idVendor}=="1410", ATTRS{idProduct}=="5041", RUN+="usb_modeswitch '%b/%k'"
+ # Novatel Wireless MC545 HSPA, U679 LTE
+ ATTRS{idVendor}=="1410", ATTRS{idProduct}=="5059", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Novatel Generic MiFi 2372 / Vodafone MiFi 2372
++ATTRS{idVendor}=="1410", ATTRS{idProduct}=="7001", RUN+="usb_modeswitch '%b/%k'"
++
+ # Sequans SQN1210/SQN1220 (generic chipsets)
+ ATTRS{idVendor}=="148e", ATTRS{idProduct}=="a000", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -543,7 +576,7 @@ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0040", RUN+="usb_modeswitch '%b/%k'"
+ # ZTE MF110 (Variant)
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0053", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# ZTE MF110 (Variant)
++# ZTE MF110 (Variant), ZTE MF110 (Variant)
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0083", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # Vodafone (ZTE) K4505-Z
+@@ -564,7 +597,7 @@ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0146", RUN+="usb_modeswitch '%b/%k'"
+ # ZTE MF190 (Variant)
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0149", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# ZTE MF190 (Variant)
++# ZTE MF190 (Variant) and others
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0154", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # ZTE MF820 4G LTE
+@@ -594,7 +627,7 @@ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1017", RUN+="usb_modeswitch '%b/%k'"
+ # Vodafone (ZTE) K4510-Z
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1171", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Vodafone (ZTE) K3770-Z
++# Vodafone / ZTE K3770-Z
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1175", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # Vodafone (ZTE) K3772-Z
+@@ -618,6 +651,12 @@ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1517", RUN+="usb_modeswitch '%b/%k'"
+ # ZTE MF652
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1520", RUN+="usb_modeswitch '%b/%k'"
+ 
++# ZTE MF591 TMobile
++ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1523", RUN+="usb_modeswitch '%b/%k'"
++
++# ZTE MF190J
++ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="1542", RUN+="usb_modeswitch '%b/%k'"
++
+ # ZTE devices
+ ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="2000", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -642,16 +681,19 @@ ATTRS{idVendor}=="1a8d", ATTRS{idProduct}=="1000", RUN+="usb_modeswitch '%b/%k'"
+ # BandRich BandLuxe C339
+ ATTRS{idVendor}=="1a8d", ATTRS{idProduct}=="2000", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Hummer DTM5731 
++# Hummer DTM5731, Aircard 901 
+ ATTRS{idVendor}=="1ab7", ATTRS{idProduct}=="5700", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # EpiValley SEC-7089 (featured by Alegro and Starcomms / iZAP)
+ ATTRS{idVendor}=="1b7d", ATTRS{idProduct}=="0700", RUN+="usb_modeswitch '%b/%k'"
+ 
++# ETCOM E300
++ATTRS{idVendor}=="1bbb", ATTRS{idProduct}=="000f", RUN+="usb_modeswitch '%b/%k'"
++
+ # Alcatel OT-X080C
+ ATTRS{idVendor}=="1bbb", ATTRS{idProduct}=="00ca", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Alcatel X200/X200L/X060S
++# Alcatel X200/X200L/X060S, Archos G9 3G Key
+ ATTRS{idVendor}=="1bbb", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
+ 
+ # Alcatel OT-X220D
+@@ -711,6 +753,9 @@ ATTRS{idVendor}=="1ee8", ATTRS{idProduct}=="0040", RUN+="usb_modeswitch '%b/%k'"
+ # Onda MDC655
+ ATTRS{idVendor}=="1ee8", ATTRS{idProduct}=="004a", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Onda MW875UP
++ATTRS{idVendor}=="1ee8", ATTRS{idProduct}=="0054", RUN+="usb_modeswitch '%b/%k'"
++
+ # Onda MSA 14.4 (TIM Brasil)
+ ATTRS{idVendor}=="1ee8", ATTRS{idProduct}=="0060", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -723,6 +768,12 @@ ATTRS{idVendor}=="1fac", ATTRS{idProduct}=="0032", RUN+="usb_modeswitch '%b/%k'"
+ # Franklin Wireless U210
+ ATTRS{idVendor}=="1fac", ATTRS{idProduct}=="0130", RUN+="usb_modeswitch '%b/%k'"
+ 
++# Franklin Wireless U600
++ATTRS{idVendor}=="1fac", ATTRS{idProduct}=="0150", RUN+="usb_modeswitch '%b/%k'"
++
++# Franklin Wireless U600
++ATTRS{idVendor}=="1fac", ATTRS{idProduct}=="0151", RUN+="usb_modeswitch '%b/%k'"
++
+ # D-Link DWM-156 (Variant)
+ ATTRS{idVendor}=="2001", ATTRS{idProduct}=="a80b", RUN+="usb_modeswitch '%b/%k'"
+ 
+@@ -759,7 +810,7 @@ ATTRS{idVendor}=="230d", ATTRS{idProduct}=="0101", RUN+="usb_modeswitch '%b/%k'"
+ # TP-Link MA180
+ ATTRS{idVendor}=="2357", ATTRS{idProduct}=="0200", RUN+="usb_modeswitch '%b/%k'"
+ 
+-# Exiss Mobile E-190 (C-motech)
++# Exiss Mobile E-190 series (made by C-motech)
+ ATTRS{idVendor}=="8888", ATTRS{idProduct}=="6500", RUN+="usb_modeswitch '%b/%k'"
+ 
+ LABEL="modeswitch_rules_end"
+diff --git a/usb_modeswitch.d/0421:0627 b/usb_modeswitch.d/0421:0627
+index d9f19ed..ef18406 100644
+--- a/usb_modeswitch.d/0421:0627
++++ b/usb_modeswitch.d/0421:0627
+@@ -1,7 +1,7 @@
+ # Nokia CS-18
+ 
+ TargetVendor=  0x0421
+-TargetProduct= 0x0612
++TargetProductList="0612,0629"
+ 
+ MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
+ 
+diff --git a/usb_modeswitch.d/0421:0632 b/usb_modeswitch.d/0421:0632
+new file mode 100644
+index 0000000..2bb585c
+--- /dev/null
++++ b/usb_modeswitch.d/0421:0632
+@@ -0,0 +1,8 @@
++#######################################################
++# Nokia CS-7M-01
++
++TargetVendor=  0x0421
++TargetProduct= 0x0632
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
+diff --git a/usb_modeswitch.d/05c6:1000:uMa=StrongRising b/usb_modeswitch.d/05c6:1000:uMa=StrongRising
+new file mode 100644
+index 0000000..296cb06
+--- /dev/null
++++ b/usb_modeswitch.d/05c6:1000:uMa=StrongRising
+@@ -0,0 +1,7 @@
++# StrongRising device 
++
++TargetVendor=   0x028a
++TargetProduct=  0x1006
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
+diff --git a/usb_modeswitch.d/0e8d:0002 b/usb_modeswitch.d/0e8d:0002
+deleted file mode 100644
+index a69391b..0000000
+--- a/usb_modeswitch.d/0e8d:0002
++++ /dev/null
+@@ -1,7 +0,0 @@
+-# MediaTek MT6276M
+-
+-TargetVendor=  0x0e8d
+-TargetProductList="00a1,00a2"
+-
+-MessageContent="555342431234567800000000000006f0010300000000000000000000000000"
+-
+diff --git a/usb_modeswitch.d/0e8d:0002:uPr=MT b/usb_modeswitch.d/0e8d:0002:uPr=MT
+new file mode 100644
+index 0000000..a69391b
+--- /dev/null
++++ b/usb_modeswitch.d/0e8d:0002:uPr=MT
+@@ -0,0 +1,7 @@
++# MediaTek MT6276M
++
++TargetVendor=  0x0e8d
++TargetProductList="00a1,00a2"
++
++MessageContent="555342431234567800000000000006f0010300000000000000000000000000"
++
+diff --git a/usb_modeswitch.d/1004:6156 b/usb_modeswitch.d/1004:6156
+new file mode 100644
+index 0000000..a47469f
+--- /dev/null
++++ b/usb_modeswitch.d/1004:6156
+@@ -0,0 +1,7 @@
++# LG LUU-2110TI
++
++TargetVendor=  0x1004
++TargetProduct= 0x6157
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++NeedResponse=1
+diff --git a/usb_modeswitch.d/1004:61aa b/usb_modeswitch.d/1004:61aa
+new file mode 100644
+index 0000000..ff91796
+--- /dev/null
++++ b/usb_modeswitch.d/1004:61aa
+@@ -0,0 +1,6 @@
++# LG VL600
++
++TargetVendor=  0x1004
++TargetProduct= 0x61a7
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
+\ No newline at end of file
+diff --git a/usb_modeswitch.d/1004:6327 b/usb_modeswitch.d/1004:6327
+new file mode 100644
+index 0000000..57b694a
+--- /dev/null
++++ b/usb_modeswitch.d/1004:6327
+@@ -0,0 +1,8 @@
++#########################################################
++# LG L-03D LTE/3G
++
++TargetVendor=  0x1004
++TargetProduct= 0x6326
++
++MessageContent=555342431234567800000000000005f1010100000000000000000000000000
++
+diff --git a/usb_modeswitch.d/106c:3b14 b/usb_modeswitch.d/106c:3b14
+new file mode 100644
+index 0000000..314331a
+--- /dev/null
++++ b/usb_modeswitch.d/106c:3b14
+@@ -0,0 +1,9 @@
++#######################################################
++# Option Beemo / Pantech P4200 LTE
++
++TargetVendor=  0x106c
++TargetProduct= 0x3721
++
++MessageContent="555342431234567824000000800008ff024445564348470000000000000000"
++NoDriverLoading=1
++
+diff --git a/usb_modeswitch.d/1199:0fff b/usb_modeswitch.d/1199:0fff
+index cc6d305..67bee81 100644
+--- a/usb_modeswitch.d/1199:0fff
++++ b/usb_modeswitch.d/1199:0fff
+@@ -1,9 +1,8 @@
+ # Sierra devices (specific driver)
+ 
+ TargetVendor=   0x1199
+-TargetProductList="0017,0018,0019,0020,0021,0022,0024,0026,0027,0028,0029,0112,0120,0218,0220,0224,6802,6803,6804,6805,6808,6809,6812,6813,6815,6816,6820,6821,6822,6832,6833,6834,6835,6838,6839,683a,683b,683c,683d,683e,6850,6851,6852,6853,6855,6856,6859,685a"
++TargetProductList="0017,0018,0019,0020,0021,0022,0024,0026,0027,0028,0029,0112,0120,0218,0220,0224,0301,6802,6803,6804,6805,6808,6809,6812,6813,6815,6816,6820,6821,6822,6832,6833,6834,6835,6838,6839,683a,683b,683c,683d,683e,6850,6851,6852,6853,6855,6856,6859,685a"
+ 
+ SierraMode=1
+ 
+ NoDriverLoading=1
+-
+diff --git a/usb_modeswitch.d/12d1:1446 b/usb_modeswitch.d/12d1:1446
+index eb673b9..c5c18e4 100644
+--- a/usb_modeswitch.d/12d1:1446
++++ b/usb_modeswitch.d/12d1:1446
+@@ -1,7 +1,7 @@
+ # Huawei, newer modems
+ 
+ TargetVendor=  0x12d1
+-TargetProductList="1001,1406,140b,140c,1412,141b,1433,1436,14ac,1506"
++TargetProductList="1001,1406,140b,140c,1412,141b,1432,1433,1436,14ac,1506,1511"
+ 
+ MessageContent="55534243123456780000000000000011062000000100000000000000000000"
+ 
+diff --git a/usb_modeswitch.d/12d1:14ba b/usb_modeswitch.d/12d1:14ba
+new file mode 100644
+index 0000000..ac3f9f9
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:14ba
+@@ -0,0 +1,8 @@
++#######################################################
++# Huawei E173u-2, E177
++
++TargetVendor=  0x12d1
++TargetProduct= 0x14d2
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
++
+diff --git a/usb_modeswitch.d/12d1:14d1 b/usb_modeswitch.d/12d1:14d1
+index 269b69e..a7a1ea4 100644
+--- a/usb_modeswitch.d/12d1:14d1
++++ b/usb_modeswitch.d/12d1:14d1
+@@ -1,4 +1,4 @@
+-# Vodafone/Huawei K3770
++# Vodafone / Huawei K3770
+ 
+ TargetVendor=  0x12d1
+ TargetProduct= 0x14c9
+diff --git a/usb_modeswitch.d/12d1:14fe b/usb_modeswitch.d/12d1:14fe
+index e2632d0..c6a8bb0 100644
+--- a/usb_modeswitch.d/12d1:14fe
++++ b/usb_modeswitch.d/12d1:14fe
+@@ -1,7 +1,7 @@
+-# Huawei E352
++# T-Mobile NL (Huawei E352)
+ 
+ TargetVendor=  0x12d1
+-TargetProductList="1506,150f"
++TargetProduct= 0x1506
+ 
+ MessageContent="55534243123456780000000000000011062000000100000000000000000000"
+ 
+diff --git a/usb_modeswitch.d/12d1:1505 b/usb_modeswitch.d/12d1:1505
+index 7b57545..48d3b13 100644
+--- a/usb_modeswitch.d/12d1:1505
++++ b/usb_modeswitch.d/12d1:1505
+@@ -1,7 +1,6 @@
+-# Huawei EC156
++# Huawei EC156, Huawei E372u-8
+ 
+ TargetVendor=  0x12d1
+-TargetProductList="140b,1506,150f"
++TargetProductList="140b,1506,150f,150a"
+ 
+ MessageContent="55534243123456780000000000000011062000000100000000000000000000"
+-
+diff --git a/usb_modeswitch.d/12d1:151a b/usb_modeswitch.d/12d1:151a
+new file mode 100644
+index 0000000..ede14b1
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:151a
+@@ -0,0 +1,6 @@
++# Huawei E392u-12
++
++TargetVendor=  0x12d1
++TargetProductList="151b"
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
+diff --git a/usb_modeswitch.d/12d1:1526 b/usb_modeswitch.d/12d1:1526
+new file mode 100644
+index 0000000..5889b4e
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:1526
+@@ -0,0 +1,8 @@
++#######################################################
++# Vodafone / Huawei K3772
++
++TargetVendor=  0x12d1
++TargetProduct= 0x14cf
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
++
+diff --git a/usb_modeswitch.d/12d1:155b b/usb_modeswitch.d/12d1:155b
+new file mode 100644
+index 0000000..55ccbcd
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:155b
+@@ -0,0 +1,8 @@
++#######################################################
++# Huawei E171
++
++TargetVendor=  0x12d1
++TargetProduct= 0x1506
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
++
+diff --git a/usb_modeswitch.d/12d1:1c0b b/usb_modeswitch.d/12d1:1c0b
+index 0b2bb45..1d74ba0 100644
+--- a/usb_modeswitch.d/12d1:1c0b
++++ b/usb_modeswitch.d/12d1:1c0b
+@@ -1,7 +1,7 @@
+ # Huawei E173s
+ 
+ TargetVendor=  0x12d1
+-TargetProductList="1c05,1c07,1c08"
++TargetProductList="1c05,1c07,1c08,1c10"
+ 
+ MessageContent="55534243123456780000000000000011062000000100000000000000000000"
+ 
+diff --git a/usb_modeswitch.d/12d1:1da1 b/usb_modeswitch.d/12d1:1da1
+index 306e561..4f7e3c5 100644
+--- a/usb_modeswitch.d/12d1:1da1
++++ b/usb_modeswitch.d/12d1:1da1
+@@ -1,7 +1,6 @@
+-# Huawei ET8282 
++# Huawei ET8282, Huawei ET127
+ 
+ TargetVendor=  0x12d1
+ TargetProduct= 0x1d09
+ 
+ HuaweiMode=1
+-
+diff --git a/usb_modeswitch.d/12d1:1f11 b/usb_modeswitch.d/12d1:1f11
+new file mode 100644
+index 0000000..f0ecdb1
+--- /dev/null
++++ b/usb_modeswitch.d/12d1:1f11
+@@ -0,0 +1,8 @@
++#######################################################
++# Vodafone / Huawei K3773
++
++TargetVendor=  0x12d1
++TargetProduct= 0x14bc
++
++MessageContent="55534243123456780000000000000011062000000100000000000000000000"
++
+diff --git a/usb_modeswitch.d/1410:7001 b/usb_modeswitch.d/1410:7001
+new file mode 100644
+index 0000000..f3ca49f
+--- /dev/null
++++ b/usb_modeswitch.d/1410:7001
+@@ -0,0 +1,5 @@
++# Novatel Generic MiFi 2372 / Vodafone MiFi 2372
++
++TargetClass=0xff
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
+diff --git a/usb_modeswitch.d/16d8:6803 b/usb_modeswitch.d/16d8:6803
+index 67d1c68..f61e0ca 100644
+--- a/usb_modeswitch.d/16d8:6803
++++ b/usb_modeswitch.d/16d8:6803
+@@ -2,6 +2,4 @@
+ 
+ TargetClass=0x02
+ 
+-MessageContent="555342431234567824000000800008ff524445564348470000000000000000"
+-
+-Interface=3
++MessageContent="555342431234567824000000800008ff524445564348473100000000000000"
+diff --git a/usb_modeswitch.d/19d2:0083 b/usb_modeswitch.d/19d2:0083
+new file mode 100644
+index 0000000..c48bc6e
+--- /dev/null
++++ b/usb_modeswitch.d/19d2:0083
+@@ -0,0 +1,9 @@
++########################################################
++# ZTE MF110 (Variant)
++
++TargetVendor=  0x19d2
++TargetProduct= 0x0124
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++NeedResponse=1
++
+diff --git a/usb_modeswitch.d/19d2:0120 b/usb_modeswitch.d/19d2:0120
+new file mode 100644
+index 0000000..d07d751
+--- /dev/null
++++ b/usb_modeswitch.d/19d2:0120
+@@ -0,0 +1,12 @@
++#ZTE-T A356
++
++TargetVendor= 0x19d2
++TargetProduct= 0x0079
++
++DetachStorageOnly=0
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
++Interface=0x00
++
++NeedResponse=0
+diff --git a/usb_modeswitch.d/19d2:0154 b/usb_modeswitch.d/19d2:0154
+index 4406b53..7c07502 100644
+--- a/usb_modeswitch.d/19d2:0154
++++ b/usb_modeswitch.d/19d2:0154
+@@ -1,7 +1,7 @@
+-# ZTE MF190 (Variant)
++# ZTE MF190 (Variant) and others
+ 
+ TargetVendor=  0x19d2
+-TargetProduct= 0x0117
++TargetProductList="0017,0117"
+ 
+ MessageContent="5553424312345678000000000000061e000000000000000000000000000000"
+ MessageContent2="5553424312345679000000000000061b000000020000000000000000000000"
+diff --git a/usb_modeswitch.d/19d2:1175 b/usb_modeswitch.d/19d2:1175
+index 58e302c..9a6573c 100644
+--- a/usb_modeswitch.d/19d2:1175
++++ b/usb_modeswitch.d/19d2:1175
+@@ -1,4 +1,4 @@
+-# Vodafone (ZTE) K3770-Z
++# Vodafone / ZTE K3770-Z
+ 
+ TargetVendor=  0x19d2
+ TargetProduct= 0x1177
+diff --git a/usb_modeswitch.d/19d2:1216 b/usb_modeswitch.d/19d2:1216
+index 8aaf7f9..3ed0c44 100644
+--- a/usb_modeswitch.d/19d2:1216
++++ b/usb_modeswitch.d/19d2:1216
+@@ -1,6 +1,6 @@
+ # ZTE MF192+
+ 
+ TargetVendor=  0x19d2
+-TargetProduct= 0x1218
++TargetProduct= 0x1217
+ 
+-MessageContent="555342430800498200000000000010FF000000000000000000000000000000"
++MessageContent="555342430800498200000000000010ff000000000000000000000000000000"
+diff --git a/usb_modeswitch.d/19d2:1523 b/usb_modeswitch.d/19d2:1523
+new file mode 100644
+index 0000000..63c5362
+--- /dev/null
++++ b/usb_modeswitch.d/19d2:1523
+@@ -0,0 +1,8 @@
++# ZTE MF591 TMobile
++
++TargetVendor=  0x19d2
++TargetProduct= 0x1525
++
++MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
++
++NeedResponse=1
+\ No newline at end of file
+diff --git a/usb_modeswitch.d/19d2:1542 b/usb_modeswitch.d/19d2:1542
+new file mode 100644
+index 0000000..ee5cb5c
+--- /dev/null
++++ b/usb_modeswitch.d/19d2:1542
+@@ -0,0 +1,10 @@
++#######################################################
++# ZTE MF190J
++
++TargetVendor=  0x19d2
++TargetProduct= 0x1544
++
++MessageContent="5553424312345678000000000000061e000000000000000000000000000000"
++MessageContent2="5553424312345679000000000000061b000000020000000000000000000000"
++NeedResponse=1
++
+diff --git a/usb_modeswitch.d/19d2:2000 b/usb_modeswitch.d/19d2:2000
+index fbe6d2b..4972dba 100644
+--- a/usb_modeswitch.d/19d2:2000
++++ b/usb_modeswitch.d/19d2:2000
+@@ -1,11 +1,10 @@
+ # ZTE devices
+ 
+ TargetVendor=   0x19d2
+-TargetProductList="0001,0002,0015,0016,0017,0031,0037,0052,0055,0063,0064,0066,0091,0108,0117,0128,0157,1402,2002,2003"
++TargetProductList="0001,0002,0015,0016,0017,0031,0037,0052,0055,0061,0063,0064,0066,0091,0108,0117,0128,0157,1402,2002,2003"
+ 
+ MessageContent="5553424312345678000000000000061e000000000000000000000000000000"
+ MessageContent2="5553424312345679000000000000061b000000020000000000000000000000"
+ MessageContent3="55534243123456702000000080000c85010101180101010101000000000000"
+ 
+ NeedResponse=1
+-
+diff --git a/usb_modeswitch.d/1ab7:5700 b/usb_modeswitch.d/1ab7:5700
+index 7556748..119b6f6 100644
+--- a/usb_modeswitch.d/1ab7:5700
++++ b/usb_modeswitch.d/1ab7:5700
+@@ -1,7 +1,7 @@
+-# Hummer DTM5731 
++# Hummer DTM5731, Aircard 901 
+ 
+ TargetVendor=  0x1ab7
+-TargetProduct= 0x5731
++TargetProductList="2000,5731"
+ 
+ MessageContent="5553424312345678000000000000061b000000020000000000000000000000" 
+ 
+diff --git a/usb_modeswitch.d/1bbb:000f b/usb_modeswitch.d/1bbb:000f
+new file mode 100644
+index 0000000..15a719b
+--- /dev/null
++++ b/usb_modeswitch.d/1bbb:000f
+@@ -0,0 +1,6 @@
++# ETCOM E300
++
++TargetVendor=  0x1bbb
++TargetProduct= 0x000f
++
++MessageContent="5553424328ae1a85000000000000061b000000020000000000000000000000"
+diff --git a/usb_modeswitch.d/1bbb:f000 b/usb_modeswitch.d/1bbb:f000
+index 7c62ef7..72634eb 100644
+--- a/usb_modeswitch.d/1bbb:f000
++++ b/usb_modeswitch.d/1bbb:f000
+@@ -1,7 +1,7 @@
+-# Alcatel X200/X200L/X060S
++# Alcatel X200/X200L/X060S, Archos G9 3G Key
+ 
+ TargetVendor=  0x1bbb
+-TargetProductList="0000,0017"
++TargetProductList="0000,0017,00b7"
+ 
+ MessageContent="55534243123456788000000080000606f50402527000000000000000000000"
+ 
+diff --git a/usb_modeswitch.d/1ee8:0013 b/usb_modeswitch.d/1ee8:0013
+index 4160490..c0bde6f 100644
+--- a/usb_modeswitch.d/1ee8:0013
++++ b/usb_modeswitch.d/1ee8:0013
+@@ -1,7 +1,7 @@
+ # Onda MW833UP
+ 
+ TargetVendor=  0x1ee8
+-TargetProduct= 0x0012
++TargetProductList="0012,0014"
+ 
+ MessageContent="555342431234567800000000000010ff000000000000000000000000000000"
+ NeedResponse=1
+diff --git a/usb_modeswitch.d/1ee8:0040 b/usb_modeswitch.d/1ee8:0040
+index b7a2e3d..0e772ad 100644
+--- a/usb_modeswitch.d/1ee8:0040
++++ b/usb_modeswitch.d/1ee8:0040
+@@ -1,7 +1,7 @@
+ # Onda MW836UP-K
+ 
+ TargetVendor=  0x1ee8
+-TargetProduct= 0x003e
++TargetProductList="003e,003f"
+ 
+ MessageContent="555342431234567800000000000010ff000000000000000000000000000000"
+ NeedResponse=1
+diff --git a/usb_modeswitch.d/1ee8:0054 b/usb_modeswitch.d/1ee8:0054
+new file mode 100644
+index 0000000..70c40ef
+--- /dev/null
++++ b/usb_modeswitch.d/1ee8:0054
+@@ -0,0 +1,7 @@
++# Onda MW875UP
++
++TargetVendor= 0x1ee8
++TargetProduct=0x0053
++
++MessageContent="555342431234567800000000000010ff000000000000000000000000000000"
++NeedResponse=1
+\ No newline at end of file
+diff --git a/usb_modeswitch.d/1fac:0150 b/usb_modeswitch.d/1fac:0150
+new file mode 100644
+index 0000000..18bf43c
+--- /dev/null
++++ b/usb_modeswitch.d/1fac:0150
+@@ -0,0 +1,8 @@
++########################################################
++# Franklin Wireless U600
++
++TargetVendor=  0x1fac
++TargetProduct= 0x0151
++
++MessageContent="555342431234567824000000800108df200000000000000000000000000000"
++
+diff --git a/usb_modeswitch.d/1fac:0151 b/usb_modeswitch.d/1fac:0151
+new file mode 100644
+index 0000000..4d7d4cf
+--- /dev/null
++++ b/usb_modeswitch.d/1fac:0151
+@@ -0,0 +1,5 @@
++# Franklin Wireless U600
++
++TargetClass=0xff
++
++Configuration=2
+\ No newline at end of file
+diff --git a/usb_modeswitch.d/21f5:1000 b/usb_modeswitch.d/21f5:1000
+index d97cc49..45e8168 100644
+--- a/usb_modeswitch.d/21f5:1000
++++ b/usb_modeswitch.d/21f5:1000
+@@ -3,5 +3,4 @@
+ TargetVendor=  0x21f5
+ TargetProduct= 0x2008
+ 
+-MessageContent="5553424312345678c000000080000671010000000000000000000000000000
+-
++MessageContent="5553424312345678c000000080000671010000000000000000000000000000"
