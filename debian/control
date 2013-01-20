@@ -3,7 +3,7 @@ Section: comm
 Priority: extra
 Maintainer: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://www.draisberghof.de/usb_modeswitch/
 Vcs-Git: git://git.debian.org/collab-maint/usb-modeswitch-data.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/usb-modeswitch-data.git
@@ -12,8 +12,8 @@ Package: usb-modeswitch-data
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}
-Recommends: usb-modeswitch (>= 1.2.1), udev (>= 0.140)
-Breaks: usb-modeswitch (<< 1.2.1)
+Recommends: usb-modeswitch (>= 1.2.5), udev (>= 0.140)
+Breaks: usb-modeswitch (<< 1.2.5)
 Replaces: usb-modeswitch (<< 1.0.7-1), usb-modeswitch-data-packed
 Conflicts: usb-modeswitch-data-packed
 Provides: usb-modeswitch-data-packed
