@@ -1,3 +1,11 @@
+usb-modeswitch-data (20121109-3) unstable; urgency=low
+
+  * Upload to unstable.
+  * Revert "Bump Standards-Version without changes needed", due to too
+    much muscle-memory.
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 06 May 2013 18:33:34 +0200
+
 usb-modeswitch-data (20121109-2) experimental; urgency=low
 
   * Bump Recommends/Breaks against usb-modeswitch to 1.2.5.
