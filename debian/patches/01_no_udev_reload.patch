@@ -5,19 +5,19 @@ Forwarded: yes (private mail)
 Last-Update: 2011-06-20
 --- a/Makefile
 +++ b/Makefile
-@@ -12,9 +12,9 @@
- 
+@@ -13,9 +13,9 @@
  clean:
+ 	$(RM) 40-usb_modeswitch.rules
  
--install: files-install db-install rules-reload
-+install: files-install db-install
+-install: all files-install db-install rules-reload
++install: all files-install db-install
  
 -install-packed: files-install db-install-packed rules-reload
 +install-packed: files-install db-install-packed
  
- files-install:
+ files-install: 
  	install -d $(PREFIX)/share/usb_modeswitch
-@@ -50,7 +50,7 @@
+@@ -54,7 +54,7 @@
  		fi \
  	fi
  

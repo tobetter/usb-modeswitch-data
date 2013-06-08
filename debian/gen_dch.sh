@@ -8,7 +8,7 @@ cid=$1
 attrs_line=0
 
 echo "    + New devices"
-git show $cid *-usb_modeswitch.rules | egrep -B1 -e '^\+ATTRS{idVendor}' | while read line
+git show $cid *-usb_modeswitch.rules | egrep -B1 -e '^\+ATTR{idVendor}' | while read line
 do
 	
 	if [ $attrs_line -eq 0 ]
@@ -20,7 +20,7 @@ do
 	then
 		attrs_line=2
 		# Line 1 is the Attributes
-		ATTRS=`echo $line | sed -e 's/^.*ATTRS{idVendor}=="\(.*\)".*ATTRS{idProduct}=="\(.*\)",.*$/\[\1:\2\]/'`
+		ATTRS=`echo $line | sed -e 's/^.*ATTR{idVendor}=="\(.*\)".*ATTR{idProduct}=="\(.*\)",.*$/\[\1:\2\]/'`
 		echo "     $ATTRS $DESC"
 	else
 		attrs_line=0

@@ -1,3 +1,39 @@
+usb-modeswitch-data (20130607-1) unstable; urgency=low
+
+  * New upstream release
+    - Included simple TCL script to regenerate rules file from configs
+    + New devices
+     [0421:0618] Nokia CS-12
+     [04cc:225c] Alcatel-Lucent T930S
+     [05c6:0010] Axesstel Modems (w/ initial idProduct 0x0010)
+     [0af0:9200] Option HSO device
+     [106c:3b11] Pantech UML290
+     [12d1:1805] Huawei U2800 Phone
+     [12d1:1c1b] Huawei GP02 (E587 Variant)
+     [12d1:1f03] KDDI (Huawei) HWD12 LTE
+     [1410:5023] Novatel MC996D
+     [1726:f00e] Axesstel MU130
+     [19d2:0150] ZTE MF656A, MF668A, MF669
+     [19d2:0266] Onda MT8205 LTE
+     [19d2:1227] ZTE MF680
+     [19d2:1528] ZTE MF196
+     [1c9e:9e08] Explay Slim
+     [1ee8:0063] Onda TM201 14.4 (TIM Italy)
+     [1ee8:0068] Onda WM301
+     [2001:a706] D-Link DWM-156 (Variant)
+     [2001:a707] D-Link DWM-156 (Variant)
+     [2001:a708] D-Link DWM-156 (Variant)
+     [2001:a805] D-Link DWR-510
+     [2020:0002] Mediatek MT6229
+     [2077:1000] Changhong CH690
+     [22de:6801] WeTelecom WM-D200
+  * Build-depend on tcl to allow the rebuild of rules file at
+    build-time.
+  * Refresh patches.
+  * Bump Recommends/Breaks against usb-modeswitch to 1.2.6.
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 08 Jun 2013 18:04:35 +0200
+
 usb-modeswitch-data (20121109-3) unstable; urgency=low
 
   * Upload to unstable.
