@@ -1,3 +1,12 @@
+usb-modeswitch-data (20130610-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixed rules file and gen-rules script to make the symlink rule
+      append instead of replace (thanks to John Hedges)
+      Closes: #698284
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 11 Jun 2013 09:50:29 +0200
+
 usb-modeswitch-data (20130607-1) unstable; urgency=low
 
   * New upstream release
