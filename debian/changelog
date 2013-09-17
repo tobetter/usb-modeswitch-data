@@ -1,3 +1,18 @@
+usb-modeswitch-data (20130807-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0408:ea25] Quanta 1K3 LTE
+     [0fca:8020] BlackBerry Q10 and Z10
+     [10a9:6080] Pantech LTE Modem
+     [12d1:156a] Huawei E3276s-151 and E3251
+     [12d1:1f15] Huawei K4305
+     [230d:0103] Teracom LW272
+     [2357:f000] TP-Link MA260
+  * Bump Recommends/Breaks against usb-modeswitch to 1.2.7
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 17 Sep 2013 13:22:45 +0200
+
 usb-modeswitch-data (20130610-1) unstable; urgency=low
 
   * New upstream release
