@@ -1,3 +1,22 @@
+usb-modeswitch-data (20131113-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [0408:ea17] Quanta 1KR / USB-lte 7410
+     [0408:ea43] Quanta MobileGenie 4G lte
+     [057c:62ff] AVM Fritz!Wlan USB Stick N v2
+     [05c6:9024] Alcatel-sbell ASB TL131 TD-LTE
+     [12d1:1f16] Vodafone K5150
+     [12d1:1f17] Vodafone K4201
+     [12d1:1f18] Vodafone K4202
+     [12d1:1f19] Vodafone K4606
+     [19d2:0304] ZTE MF821D (Variant)
+     [19d2:1225] ZTE MF668 (Variant), MF70
+     [19d2:2004] ZTE MF60
+     [1bbb:011f] Haier EVDO Rev. A
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 25 Nov 2013 10:40:00 +0100
+
 usb-modeswitch-data (20130807-1) unstable; urgency=low
 
   * New upstream release
