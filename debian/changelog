@@ -1,3 +1,19 @@
+usb-modeswitch-data (20140129-1) unstable; urgency=medium
+
+  * New upstream release
+    + New devices
+     [0685:2000] ZE-3G 7.2Mbs HSPA modem
+     [12d1:1f1b] Vodafone / Huawei Kxxxx
+     [12d1:1f1c] Vodafone / Huawei Kxxxx
+     [12d1:1f1d] Vodafone / Huawei Kxxxx
+     [12d1:1f1e] Vodafone / Huawei Kxxxx
+     [19d2:1030] Vodafone K5008-z (MF823)
+
+  * Bump Recommends/Breaks against usb-modeswitch to 2.1.0
+  * Bump Standards-Version to 3.9.5 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 10 Feb 2014 14:24:06 +0100
+
 usb-modeswitch-data (20131113-1) unstable; urgency=low
 
   * New upstream release
