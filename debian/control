@@ -12,8 +12,8 @@ Package: usb-modeswitch-data
 Architecture: all
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}
-Recommends: usb-modeswitch (>= 2.1.0), udev (>= 0.140)
-Breaks: usb-modeswitch (<< 2.1.0)
+Recommends: usb-modeswitch (>= 2.1.1), udev (>= 0.140)
+Breaks: usb-modeswitch (<< 2.1.1)
 Replaces: usb-modeswitch (<< 1.0.7-1), usb-modeswitch-data-packed
 Conflicts: usb-modeswitch-data-packed
 Provides: usb-modeswitch-data-packed
