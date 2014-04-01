@@ -1,3 +1,22 @@
+usb-modeswitch-data (20140327-1) unstable; urgency=low
+
+  * New upstream release
+    + New devices
+     [12d1:157c] Huawei E3276-s150
+     [12d1:157d] Huawei E3331
+     [19d2:0318] ZTE MF821D/MF826
+     [19d2:1207] ZTE MF192 (Variant)
+     [19d2:1210] ZTE MF195
+     [19d2:1219] ZTE MF192 (Variant)
+     [19d2:1233] ZTE MFxxx
+     [19d2:1238] ZTE MF825A
+     [19d2:1511] ZTE MFxxx
+     [19d2:1536] ZTE MF190J
+
+  * Bump Recommends/Breaks against usb-modeswitch to 2.1.1
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 01 Apr 2014 13:35:33 +0200
+
 usb-modeswitch-data (20140129-1) unstable; urgency=medium
 
   * New upstream release
