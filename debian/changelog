@@ -1,3 +1,32 @@
+usb-modeswitch-data (20140529-1) unstable; urgency=medium
+
+  * New upstream release
+    + New devices
+     [0408:f001] SpeedUp SU-8500U
+     [04cc:226e] Nexperia TM TD-SCDMA
+     [04cc:226f] Nexperia TM TD-SCDMA (Variant)
+     [04fc:2140] Sunplus Techn. SU-3200U
+     [0b3c:f00c] Olivetti Olicard 500
+     [0b3c:f017] Olivetti Olicard 160
+     [0bdb:190d] Ericsson F5521gw
+     [0bdb:1910] Ericsson F5521gw (Variant)
+     [0fce:d0df] Sony Ericsson EC400
+     [1410:5055] Novatel MiFi 4082
+     [19d2:1232] ZTE MFxxx
+     [1c9e:9101] Emobile D21LC (Variant)
+     [1c9e:9401] Emobile D21LC
+     [1c9e:9d00] Prolink PCM100
+     [2020:f00f] SpeedUp SU-8000U
+     [23a2:1010] Titan 3.5G
+    - Substantial change in handling of Huawei devices
+    - Generic udev rule and additional generic configuration files
+      (as fallback for unknown models or as OS-specific catch-all)
+
+  * Bump Recommends/Breaks against usb-modeswitch to 2.2.0
+  * Update VCS-* fields to canonical forms
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 09 Jun 2014 11:19:43 +0200
+
 usb-modeswitch-data (20140327-1) unstable; urgency=low
 
   * New upstream release
