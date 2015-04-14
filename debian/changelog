@@ -1,3 +1,43 @@
+usb-modeswitch-data (20150115-1) unstable; urgency=medium
+
+  * New upstream release
+    + New devices
+     [0408:1000] Quanta MU-Q101
+     [04cc:2251] Alcatel-Lucent ABS-T920
+     [1614:0800] Amoi H-01
+     [1614:0802] Amoi H-02
+     [19d2:0413] Telewell TW-LTE 4G
+     [19d2:1038] ZTE / Vodafone K4607-Z
+     [19d2:1237] ZTE / Vodafone K4201
+     [19d2:1420] ZTE MF730
+     [19d2:1588] ZTE MF710M Variants
+     [1bbb:022c] Alcatel X602D
+     [1c9e:6000] TU930, IVIO IV-2010u
+     [1d09:1000] TechFaith BSNL Capitel
+     [1d09:1021] Aiko 81D
+     [1d09:1025] TechFaith FlyingLARK46
+     [1dbc:0669] Wisue W340
+     [1ee8:0003] Onda MV815U
+     [1ee8:0018] Onda MO835UP
+     [1ee8:0045] Onda MDC655
+     [1ee8:004f] Onda MDC655 Variant
+     [2001:00a6] D-Link DWM-157 B1
+     [2001:98ff] D-Link DWM-221
+     [2001:a403] D-Link DWM-156 A8
+     [2001:a405] D-Link DWM-167 A1
+     [20a6:f00e] Intex 3.5G
+     [20b9:1682] Tlaytech TEU800
+     [21f5:3010] StrongRising STD808
+     [2262:0001] Viettel VT100
+     [230d:0003] Linktop LW272/LW273 (BSNL Teracom)
+     [230d:000b] Zoom 3G
+     [230d:000d] Intex Speed 3G v7.2
+     [257a:*000] Unknown devices
+     [ed09:1021] Aiko 81D, fw with wrong vendor ID
+   - many minor corrections and additions to existing configurations
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 14 Apr 2015 08:02:35 +0200
+
 usb-modeswitch-data (20140529-1) unstable; urgency=medium
 
   * New upstream release

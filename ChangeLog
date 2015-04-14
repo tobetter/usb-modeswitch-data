@@ -1,3 +1,16 @@
+20150115:
+    Added devices: Aiko 81D, Alcatel-Lucent ABS-T920, Alcatel X602D,
+    Amoi H-01, Amoi H-02, D-Link DWM-157 B1, D-Link DWM-221, D-Link
+    DWM-156 A8, D-Link DWM-167 A1, Huawei ETS1201, Intex 3.5G, Intex Speed
+    3G v7.2, Linktop LW272/LW273 (BSNL Teracom), Onda MV815U, Onda MO835UP,
+    Onda MDC655, Onda MDC655 Variant, Quanta MU-Q101, StrongRising STD808,
+    Telewell TW-LTE 4G, TechFaith Venus VT-18, TechFaith BSNL Capitel,
+    TechFaith FlyingLARK46, Tlaytech TEU800, TU930, IVIO IV-2010u, Viettel
+    VT100, Wisue W340, Zoom 3G, ZTE / Vodafone K4607-Z, ZTE / Vodafone K4201,
+    ZTE MF730, ZTE MF710M Variants, several modems with unknown names (vendor
+    ID 0x257a); many minor corrections and additions to existing
+    configurations. Thanks to Lars Melin once more for extended research and
+    collecting!
 20140529:
     ATTENTION: requires usb-modeswitch version >= 2.2.0 due to new para-
     meter HuaweiNewMode (further reducing config file size);
