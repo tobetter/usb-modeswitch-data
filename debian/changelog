@@ -1,3 +1,19 @@
+usb-modeswitch-data (20150627-1) unstable; urgency=medium
+
+  * New upstream release
+    + New devices
+     [0922:1003] Dymo LabelManager 420P
+     [10a9:606f] Pantech/Verizon UML295
+     [1782:0003] Spreadtrum SC7702
+     [19d2:0388] ZTE MF90 Mobile Hotspot
+     [2001:a401] D-Link DWM-221 B1
+    (Closes: #786825)
+  * Bump Recommends/Breaks against usb-modeswitch to 2.2.2
+  * Bump Standards-Version to 3.9.6 without changes needed
+  * Add gbp.conf for dch and import-orig
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 29 Jun 2015 19:37:23 +0200
+
 usb-modeswitch-data (20150115-1) unstable; urgency=medium
 
   * New upstream release
