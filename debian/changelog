@@ -1,3 +1,20 @@
+usb-modeswitch-data (20151101-1) unstable; urgency=medium
+
+  * New upstream release
+    + New devices
+     [12d1:1573] Huawei ME909u-521
+     [1410:9020] Novatel U620L
+     [1410:9022] Novatel U620L
+     [19d2:0198] ZTE MF820s, MF832s
+     [19d2:1580] ZTE MF195E
+     [12d1:1597] Huawei E327s-150 (Variant)
+     [12d1:15ce] Huawei E3531s-2, E3131 (Variant)
+     [12d1:15d0] Huawei E3131 (Variant)
+     [12d1:15d2] Huawei E3531 (Variant)
+    - Small correction of Makefile for reproducibility (Closes: #803603)
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 02 Nov 2015 08:10:55 +0100
+
 usb-modeswitch-data (20150627-1) unstable; urgency=medium
 
   * New upstream release
