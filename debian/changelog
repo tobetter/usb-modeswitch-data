@@ -1,3 +1,36 @@
+usb-modeswitch-data (20160112-1) unstable; urgency=medium
+
+  * New upstream release
+    + New devices
+     [07d1:f000] D-Link DWM-151 A1
+     [0922:1007] Dymo LabelManager Wireless PnP
+     [1199:9011] Sierra MC8305
+     [1199:9013] Sierra MC8355
+     [1199:9017] Sierra MC8355 Variant
+     [1199:901b] Sierra MC7770
+     [1199:901c] Sierra EM7700
+     [1199:901f] Sierra EM7355
+     [1199:9041] Sierra EM7305
+     [1199:9051] Sierra AC340U
+     [1199:9053] Sierra AC770S
+     [1199:9063] Sierra EM7305
+     [19d2:1595] ZTE MF710 (Vietnam)
+     [1c9e:9bfe] XS Stick W100 (Omega)
+     [1ee8:0007] Onda POM1051
+     [1ee8:0048] Onda MT655
+     [20a6:f00a] BM WM78
+    × Devices updates
+     [0408:1000] Quanta MU-Q101
+     [12d1:101e] Huawei U7510 / U7517
+     [1410:9020] Novatel U620L
+     [2001:a401] D-Link DWM-221 B1
+    - All Option configs updated with new OptionMode parameter from
+      usb-modeswitch 2.3.0
+  * Bump Recommends/Breaks against usb-modeswitch to 2.3.0
+  * Update gbp.conf
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 14 Jan 2016 13:05:19 +0100
+
 usb-modeswitch-data (20151101-1) unstable; urgency=medium
 
   * New upstream release
