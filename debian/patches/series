@@ -1,1 +1,2 @@
 01_no_udev_reload.patch
+02_pack_config_reproducibly.patch

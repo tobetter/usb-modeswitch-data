@@ -1,3 +1,10 @@
+usb-modeswitch-data (20160112-2) unstable; urgency=medium
+
+  * Add patch to add a --sort=name option to the tar call, for reproducibility
+  * Bump Standards-Version to 3.9.7 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 02 Mar 2016 20:42:29 +0100
+
 usb-modeswitch-data (20160112-1) unstable; urgency=medium
 
   * New upstream release

@@ -1,0 +1,14 @@
+Description: Add --sort=name to the tar call, to make the builds reproducible
+Author: Didier Raboud <odyx@debian.org>
+Last-Update: 2016-03-02
+--- a/Makefile
++++ b/Makefile
+@@ -31,7 +31,7 @@
+ db-install-packed:
+ 	@# Create a compressed tar without gzip timestamp, so tar.gz
+ 	@# differs only if content is different
+-	cd ./usb_modeswitch.d; tar --mode=go=rX,u+rw,a-s -cf ../configPack.tar *
++	cd ./usb_modeswitch.d; tar --sort=name --mode=go=rX,u+rw,a-s -cf ../configPack.tar *
+ 	gzip -f9n ./configPack.tar
+ 	install --mode=644 -t $(PREFIX)/share/usb_modeswitch ./configPack.tar.gz
+ 	rm -f ./configPack.tar.gz
