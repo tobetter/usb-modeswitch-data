@@ -31,7 +31,7 @@ db-install: files-install
 db-install-packed:
 	@# Create a compressed tar without gzip timestamp, so tar.gz
 	@# differs only if content is different
-	cd ./usb_modeswitch.d; tar --mode=go=rX,u+rw,a-s -cf ../configPack.tar *
+	cd ./usb_modeswitch.d; find * -print0 | LC_ALL=C sort -z | tar --no-recursion --null --files-from=- --mode=go=rX,u+rw,a-s -cf ../configPack.tar
 	gzip -f9n ./configPack.tar
 	install --mode=644 -t $(PREFIX)/share/usb_modeswitch ./configPack.tar.gz
 	rm -f ./configPack.tar.gz
