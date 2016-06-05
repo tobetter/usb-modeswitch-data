@@ -1,0 +1,21 @@
+From: intrigeri <intrigeri@debian.org>
+Date: Sat, 4 Jun 2016 17:31:48 +0000
+Subject: Create 40-usb_modeswitch.rules reproducibly.
+
+---
+ gen-rules.tcl | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gen-rules.tcl b/gen-rules.tcl
+index 44781d3..22b7d7b 100755
+--- a/gen-rules.tcl
++++ b/gen-rules.tcl
+@@ -27,7 +27,7 @@ if {![file isdirectory usb_modeswitch.d]} {
+ 	exit
+ }
+ 
+-set filelist [glob -nocomplain ./usb_modeswitch.d/*]
++set filelist [lsort [glob -nocomplain ./usb_modeswitch.d/*]]
+ if {[llength $filelist] == 0} {
+ 	puts "The \"usb_modeswitch.d\" subfolder is empty"
+ 	exit

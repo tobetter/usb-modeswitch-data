@@ -1,3 +1,13 @@
+usb-modeswitch-data (20160112-3) unstable; urgency=medium
+
+  [ intrigeri ]
+  * Updates patches for reproducibility (Closes: #826343):
+    - 02_pack_config_reproducibly.patch: update to make the sort order
+      independent of the build locale
+    - Create 40-usb_modeswitch.rules reproducibly
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 05 Jun 2016 15:26:39 +0200
+
 usb-modeswitch-data (20160112-2) unstable; urgency=medium
 
   * Add patch to add a --sort=name option to the tar call, for reproducibility
