@@ -1,2 +1,3 @@
 01_no_udev_reload.patch
 02_pack_config_reproducibly.patch
+03-Create-40-usb_modeswitch.rules-reproducibly.patch

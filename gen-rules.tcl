@@ -27,7 +27,7 @@ if {![file isdirectory usb_modeswitch.d]} {
 	exit
 }
 
-set filelist [glob -nocomplain ./usb_modeswitch.d/*]
+set filelist [lsort [glob -nocomplain ./usb_modeswitch.d/*]]
 if {[llength $filelist] == 0} {
 	puts "The \"usb_modeswitch.d\" subfolder is empty"
 	exit
