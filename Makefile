@@ -1,5 +1,5 @@
 PROG        = usb-modeswitch-data
-VERS        = 20160612
+VERS        = 20160803
 RM          = /bin/rm -f
 PREFIX      = $(DESTDIR)/usr
 ETCDIR      = $(DESTDIR)/etc
@@ -35,24 +35,6 @@ db-install-packed:
 	gzip -f9n ./configPack.tar
 	install --mode=644 -t $(PREFIX)/share/usb_modeswitch ./configPack.tar.gz
 	rm -f ./configPack.tar.gz
-
-rules-reload:
-	@if [ -f $(ETCDIR)/issue ]; then \
-		UDEVADM=`which udevadm 2>/dev/null`; \
-		if [ "x$$UDEVADM" != "x" ]; then \
-			UDEVADM_VER=`$$UDEVADM -V 2>/dev/null`; \
-			if [ -z $$UDEVADM_VER ]; then \
-				UDEVADM_VER=`$$UDEVADM --version 2>/dev/null`; \
-			fi; \
-			if [ $$UDEVADM_VER -gt 127 ]; then \
-				$$UDEVADM control --reload-rules; \
-			else \
-				$$UDEVADM control --reload_rules; \
-			fi \
-		elif [ `which udevcontrol 2>/dev/null` ]; then \
-		`which udevcontrol` reload_rules; \
-		fi \
-	fi
 
 uninstall: files-uninstall
 
