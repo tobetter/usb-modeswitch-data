@@ -1,7 +1,8 @@
 Source: usb-modeswitch-data
 Section: comm
 Priority: extra
-Maintainer: Didier Raboud <odyx@debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>= 9), tcl
 Standards-Version: 3.9.6
 Homepage: http://www.draisberghof.de/usb_modeswitch/
