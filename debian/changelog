@@ -1,3 +1,10 @@
+usb-modeswitch-data (20160803-1.is.really.20160803-1) zesty; urgency=medium
+
+  * Fakesync with Debian 20160803-1 now that we've merged
+    its matching usb-modeswitch (LP: #1639379)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 11 Dec 2016 22:50:13 -0500
+
 usb-modeswitch-data (20160803-1) unstable; urgency=medium
 
   * New upstream release
