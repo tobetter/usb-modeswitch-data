@@ -1,3 +1,11 @@
+usb-modeswitch-data (20170205-1) experimental; urgency=medium
+
+  * Bugfix release:
+    - Removed all catch-all fallback config files as they can affect unrelated
+      devices (fixes https://bugzilla.redhat.com/show_bug.cgi?id=1374913)
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 22 Apr 2017 14:29:19 +0200
+
 usb-modeswitch-data (20170120-1) unstable; urgency=medium
 
   * New upstream release
