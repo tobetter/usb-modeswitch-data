@@ -1,3 +1,14 @@
+usb-modeswitch-data (20170205-2) unstable; urgency=medium
+
+  * Migrate 20170205 to unstable
+  * Bump Standards-Version to 4.0.0 without changes needed
+  * Migrate to debhelper compat 10
+  * Add lintian override for udev-rule-missing-subsystem false-positive
+  * Drop all postinst code managing versions before the current
+    oldoldstable (wheezy, 20120815-2)
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 24 Jul 2017 08:44:54 +0200
+
 usb-modeswitch-data (20170205-1) experimental; urgency=medium
 
   * Bugfix release:
