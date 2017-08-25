@@ -3,7 +3,7 @@ Section: comm
 Priority: extra
 Maintainer: Didier Raboud <odyx@debian.org>
 Build-Depends: debhelper (>= 10.2.5~), tcl
-Standards-Version: 4.0.0
+Standards-Version: 4.1.0
 Homepage: http://www.draisberghof.de/usb_modeswitch/
 Vcs-Git: https://alioth.debian.org/anonscm/git/collab-maint/usb-modeswitch-data.git
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/usb-modeswitch-data.git
