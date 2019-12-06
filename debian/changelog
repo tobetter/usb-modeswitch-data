@@ -1,3 +1,46 @@
+usb-modeswitch-data (20191128-1) unstable; urgency=medium
+
+  * New upstream version 20191128
+    + New devices
+     [03f0:0857] HP lt4220 NGFF Card
+     [03f0:371d] HP un2430
+     [03f0:4b1d] HP hs2434
+     [03f0:4e1d] HP lt4111
+     [03f0:a31d] HP lt4132
+     [0846:0fff] Netgear AirCard 779S
+     [0bda:1a2b] D-Link DWA-171 Wifi Dongle
+     [0e8d:2870] COMFAST CF-WU782AC WiFi Dongle
+     [1410:9030] Novatel USB730L
+     [1410:b00c] Novatel MiFi 6620L
+     [15eb:a403] Abit AK-020
+     [161c:f010] KuWfi 4g LTE
+     [19d2:1421] ZTE MF833V, Telewell TW-LTE v2
+     [1c9e:3003] 4G System XS W21s
+     [1c9e:f030] JioFi JMR1040
+     [2001:ac01] D-Link DWM-222 A2
+     [2020:2030] Telewell TW-LTE, Olicard 600, Digisol BG-BA4305
+     [2357:0600] TP-Link UE300
+     [2fd4:9aff] 4G Systems W1208
+     [413c:81a2] Dell DW5806
+     [413c:81a3] Dell DW5570
+     [413c:81a4] Dell DW5570e
+     [413c:81a8] Dell DW5808
+     [413c:81b1] Dell DW5809e
+     [413c:81b3] Dell DW5809e
+     [413c:81d7] Dell DW5821e
+     [413c:81e0] Dell DW5821e-eSIM
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+
+  [ Didier Raboud ]
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Bump S-V to 4.4.1 without changes needed
+  * Set Rules-Requires-Root to no
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 06 Dec 2019 18:15:47 +0100
+
 usb-modeswitch-data (20170806-2) unstable; urgency=medium
 
   * Cleanup d/control thanks to `cme update dpkg-control`
@@ -123,8 +166,8 @@ usb-modeswitch-data (20160803-1) unstable; urgency=medium
     - Removed devices (handled by kernel)
      [0bdb:190d] Ericsson F5521gw
      [0bdb:1910] Ericsson F5521gw (Variant)
-  
-  * Packaging: 
+
+  * Packaging:
     - Drop patch to avoid udev reload during build, integrated upstream
     - Drop patches to build reproducibly, all integrated upstream
 
@@ -775,7 +818,7 @@ usb-modeswitch-data (20101222-1) experimental; urgency=low
 
 usb-modeswitch-data (20101202-1) experimental; urgency=low
 
-  * New upstream release 
+  * New upstream release
     + New devices
      [12d1:1553] Huawei E1553
      [12d1:1c0b] Huawei E173s
@@ -1013,7 +1056,7 @@ usb-modeswitch-data (20100110-1) unstable; urgency=low
     - See http://bugs.debian.org/557610#19
     - Add a note about it in NEWS.Debian
   * Patches:
-    + 05_move_wrappers_to_usr.patch 
+    + 05_move_wrappers_to_usr.patch
        Add. Moves wrappers to specific /usr/share/usb_modeswitch
     + 07_SYSFS_to_ATTRS.patch
         Add to fix "later udev versions output loads of syslog warnings"

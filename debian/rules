@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 %:
-	dh  $@
+	dh $@
 
 # Install in debian/tmp, to pick things with dh_install
 # Pack the rules for usb-modeswitch-data
