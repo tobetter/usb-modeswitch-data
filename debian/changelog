@@ -1,3 +1,10 @@
+usb-modeswitch-data (20191128-2) unstable; urgency=medium
+
+  [ Chris Lamb ]
+  * Make the build reproducible (Closes: #946330)
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 08 Dec 2019 15:02:35 +0100
+
 usb-modeswitch-data (20191128-1) unstable; urgency=medium
 
   * New upstream version 20191128
