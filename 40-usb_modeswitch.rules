@@ -237,6 +237,9 @@ ATTRS{idVendor}=="16d8", ATTRS{idProduct}=="700a", RUN+="usb_modeswitch '%b/%k'"
 # C-motech CGU-628 (aka "Franklin Wireless CGU-628A" aka "4G Systems XS Stick W12")
 ATTRS{idVendor}=="16d8", ATTRS{idProduct}=="f000", RUN+="usb_modeswitch '%b/%k'"
 
+# ZTE AC581
+ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0026", RUN+="usb_modeswitch '%b/%k'"
+
 # ZTE MF110
 ATTRS{idVendor}=="19d2", ATTRS{idProduct}=="0053", RUN+="usb_modeswitch '%b/%k'"
 
