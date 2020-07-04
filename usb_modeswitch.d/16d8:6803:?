@@ -4,7 +4,8 @@
 DefaultVendor= 0x16d8
 DefaultProduct=0x6803
 
-TargetClass=0xff
+TargetVendor=  0x16d8
+TargetProduct= 0x680a
 
 CheckSuccess=20
 

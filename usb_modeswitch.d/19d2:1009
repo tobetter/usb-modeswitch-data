@@ -1,12 +1,12 @@
 ########################################################
-# Zydas ZD1211RW WLAN USB, Sphairon HomeLink 1202 (Variant 1)
+# Vodafone (ZTE) K3571-Z
 
-DefaultVendor= 0x0ace
-DefaultProduct=0x2011
+DefaultVendor= 0x19d2
+DefaultProduct=0x1009
+
+TargetVendor=  0x19d2
+TargetProduct= 0x1010
 
 CheckSuccess=20
 
 MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
-
-NoDriverLoading=1
-
