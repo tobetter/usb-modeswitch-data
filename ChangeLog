@@ -1,3 +1,6 @@
+20100623:
+    Huawei E173 was left out in previous release, add it again;
+    added BandLuxe C170 and C270 (now confirmed working)
 20100621 (with release 1.1.3):
     added ZTE devices (MU351, MF110 variants, MF112, MF627);
     added Sierra target IDs and Option devices (sync to kernel 2.6.34);
