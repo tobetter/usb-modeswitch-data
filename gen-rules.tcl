@@ -4,17 +4,15 @@
 #
 # <date> should be in the form YYYYMMDD
 #
-# Config files are expected to be in subfolder "usb_modeswitch.d"
-#
 # A config file is expected to have one comment line containing
 # a model name or other concise device specifications
 
 
 # Default version string
-set version "20160803"
+set version "20151101"
 
 # Devices excluded from Huawei catch-all rule
-set x_huaweiList {12d1:1573 12d1:15c1}
+set x_huaweiList {12d1:1573}
 
 if {[lindex $argv 0] == "--set-version" && [regexp {\d\d\d\d\d\d\d\d} [lindex $argv 1]]} {
 	set version [lindex $argv 1]
@@ -27,7 +25,7 @@ if {![file isdirectory usb_modeswitch.d]} {
 	exit
 }
 
-set filelist [lsort [glob -nocomplain ./usb_modeswitch.d/*]]
+set filelist [glob -nocomplain ./usb_modeswitch.d/*]
 if {[llength $filelist] == 0} {
 	puts "The \"usb_modeswitch.d\" subfolder is empty"
 	exit
@@ -40,7 +38,7 @@ set wc [open "40-usb_modeswitch.rules" w]
 puts -nonewline $wc {# Part of usb-modeswitch-data, version }
 puts $wc $version
 puts $wc {#
-# Works with usb_modeswitch versions >= 2.4.0 (extension of StandardEject)
+# Works with usb_modeswitch versions >= 2.2.2 (extension of PantechMode)
 #
 ACTION!="add|change", GOTO="modeswitch_rules_end"
 
@@ -48,10 +46,21 @@ ACTION!="add|change", GOTO="modeswitch_rules_end"
 # transfer; checked against a list of known modems, or else no action
 KERNEL=="ttyUSB*", ATTRS{bNumConfigurations}=="*", PROGRAM="usb_modeswitch --symlink-name %p %s{idVendor} %s{idProduct} %E{PRODUCT}", SYMLINK+="%c"
 
-SUBSYSTEM!="usb", ACTION!="add",, GOTO="modeswitch_rules_end"
+SUBSYSTEM!="usb", GOTO="modeswitch_rules_end"
+
+# Adds the device ID to the "option" driver after a warm boot
+# in cases when the device is yet unknown to the driver; checked
+# against a list of known modems, or else no action
+ATTR{bInterfaceClass}=="ff", ATTR{bInterfaceNumber}=="00", ATTRS{bNumConfigurations}=="*", RUN+="usb_modeswitch --driver-bind %p %s{idVendor} %s{idProduct} %E{PRODUCT}"
+
+
+# Don't continue on "change" event, prevent trigger by changed configuration
+ACTION!="add", GOTO="modeswitch_rules_end"
+
 
 # Generic entry for most Huawei devices, excluding Android phones
 ATTRS{idVendor}=="12d1", ATTRS{manufacturer}!="Android", ATTR{bInterfaceNumber}=="00", ATTR{bInterfaceClass}=="08", RUN+="usb_modeswitch '%b/%k'"}
+
 
 set vendorList ""
 set dvid ""

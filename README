@@ -1,15 +1,10 @@
 README for USB_ModeSwitch Data
 
-Almost all new and corrected device configurations since around 2012
-were collected and compiled by Lars Melin. Thank you!
-
-Without a well-maintained base of configuration info, usb_modeswitch
-would just be a useless blob of code. So:
-
-PLEASE REPORT NEW DEVICES !
 
 For up-to-date and detailed information (plus a friendly forum) visit
 http://www.draisberghof.de/usb_modeswitch
+
+PLEASE REPORT NEW DEVICES !
 
 
 
@@ -17,28 +12,33 @@ This is a data package to complement the full release package of
 USB_ModeSwitch, a tool to switch multi-mode USB devices.
 It is used since usb-modeswitch version 1.0.3.
 
-Recommended version of usb-modeswitch package is 2.4.0 and above.
+Recommended version of usb-modeswitch package is 1.2.5 and above. From
+this version on, the rules file does not check for the class of inter-
+face 0 anymore, the check was moved to the dispatcher.
+The changes were necessary for future MBIM device support.
 
-
-Installation
-============
-
-Just run "make install". To re-generate udev rules file (Note: "tcl" 
-package required), type "make clean" and install again .
+Just do "make install". To re-generate udev rules file, type "make clean"
+and install again ("tcl" package required).
 
 
 Tasks initiated by the rules file:
 ==================================
 
-- call tiny shell script in /lib/udev which in turn calls the wrapper
-  (/usr/sbin/usb_modeswitch_dispatcher) to initiate switching for known
-  devices when plugged in or present at boot time
+- call wrapper to initiate switching for known devices when plugged in
+  (starting from version 1.1.4 at boot time too)
 
 - adding symlink "gsmmodem" to appropriate connection port (out of 2-5
   ports provided by some devices); this is only a convenience feature and
   NOT needed for switching or later port operation.
   This action will be triggered for known modems only (at least switched
-  once before on this system)
+  once on this system)
+
+- loading and binding the "option" driver if the device arrives in modem
+  state (not CDC/ACM) and the device ID is not yet known to the driver.
+  This action will be triggered only for modems known to the system (at
+  least switched once).
+  To prevent the default driver binding, add NoDriverLoading=1 to the
+  respective device configuration file
 
 
 Explanation about config file names:
@@ -53,7 +53,7 @@ to test can be attached after further colons:
 The strings match if they are part of the attribute content. Use "_"
 to match spaces (it will match "_" too!).
 
-Currently recognized attributes are:
+Currently recognized attibutes are:
 
 uMa = USB, iManufacturer
 uPr = USB, iProduct
@@ -62,7 +62,7 @@ sVe = SCSI, Vendor
 sMo = SCSI, Model
 sRe = SCSI, Revision
 
-This list is easily extendable should it be necessary.
+This list is easily extendable if necessary.
 
 Example:
 <vid>:<pid>:uPr=CDMA_Mo will match iProduct "CDMA Modem" or "MyCDMA_Mordor"
@@ -91,7 +91,14 @@ Parameters used only in config files:
 
 These are not evaluated by the binary but by the wrapper.
 
-- WaitBefore=<seconds>		delay the switching process
+WaitBefore=<seconds>		delay the switching process
+
+DriverModule=<module name>	load a specific driver module after switch
+
+DriverIDPath=<path to attribute>
+				if the driver has the ability to add new device IDs
+				on-the-fly, this is the file node to use.
+				Example: "/sys/bus/usb-serial/drivers/option1/new_id"
 
 See also complete parameter explanation in REFERENCE.
 
@@ -106,15 +113,16 @@ Notes about specific devices:
 
 - 1266:1000 (Royaltek Q110): switching method very likely but unconfirmed
 
+- Some WiMAX and LTE devices are included since 20101222; for some of these
+  drivers are work in progress or not available yet. Efforts are underway.
+  Stand by or search for "staging drivers".
+
 - 05c6:2000 (unnamed HSDPA modem from "dealextreme"): unusually long switching
   time reported, even with MS Windoze - 30 to 40 seconds. Don't be alarmed.
 
 - 0471:1210 (Philips chipset): had to be split after variants with different
   targets and behaviour appeared. This is not fully confirmed yet, please
   report problems.
-
-- 1004:6190 (LG AD600): seems to require an unusually wait before starting the
-  modeswitch (10 secs)
 
 
 Legal
@@ -136,4 +144,4 @@ Or find it as the file COPYING in this folder.
 
 
 
-Last revised: 2016-08-03, Josua Dietze
+Last revised: 2015-06-27, Josua Dietze
